@@ -375,7 +375,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Tablet
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_CHARACTERISTICS := nosdcard,tablet
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml \
