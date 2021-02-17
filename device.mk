@@ -398,6 +398,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
+
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
 
