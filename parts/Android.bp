@@ -16,5 +16,6 @@ android_app {
 
     static_libs: [
         "co.aospa.resources",
+        "//hardware/xiaomi:vendor.xiaomi.hardware.touchfeature-V1.0-java",
     ],
 }
