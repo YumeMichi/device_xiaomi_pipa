@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Switch;
+import android.util.Log;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -59,13 +60,11 @@ public class XiaomiKeyboardSettingsFragment extends PreferenceFragment implement
 
     private void enableKeyboard(int status) {
         if (status == 1) {
-            FileUtils.writeLine("/sys/devices/platform/soc/soc:xiaomi_keyboard/xiaomi_keyboard_conn_status", "enable_keyboard");
             SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_KEYBOARD, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
             editor.putInt(SHARED_KEYBOARD, status);
             editor.commit();
         } else {
-            FileUtils.writeLine("/sys/devices/platform/soc/soc:xiaomi_keyboard/xiaomi_keyboard_conn_status", "disable_keyboard");
             SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_KEYBOARD, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
             editor.putInt(SHARED_KEYBOARD, status);
