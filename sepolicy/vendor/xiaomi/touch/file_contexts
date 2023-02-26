@@ -1,2 +1,8 @@
 # xiaomi-touch: Palm sensor
 /sys/devices/virtual/touch/touch_dev/palm_sensor                                           u:object_r:vendor_sysfs_tp_virtual_prox:s0
+
+# Touch Feature
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service                         u:object_r:hal_touchfeature_xiaomi_default_exec:s0
+
+# Xiaomi Touch
+/dev/xiaomi-touch                                                                          u:object_r:vendor_touchfeature_device:s0
