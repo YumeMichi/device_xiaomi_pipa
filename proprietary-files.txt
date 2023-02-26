@@ -889,6 +889,15 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
+# Touchfeature - MIUI
+vendor/bin/hw/vendor.xiaomi.hardware.touchfeature@1.0-service|dc27181a449029c29eb860916db15c3c338b6602
+vendor/bin/toucheventcheck|4958f9e980aee5744c928ddfdfc49b8411d0d4d3
+vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc|3def34d082c4b5e1e31ce769473bcb46cf26fb8d
+vendor/lib/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so|8e40044769aa39df0cd515042ead98373eafdffe
+vendor/lib/vendor.xiaomi.hardware.touchfeature@1.0.so|02b83c8ffeba6dfbe1288f83d77167ddd505916d
+vendor/lib64/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so|9af649faa7b430330290273a9883fdae309addc7
+vendor/lib64/vendor.xiaomi.hardware.touchfeature@1.0.so|9fde9a15b87dea68f80049121695bbf2abe16fa5
+
 # UBWC
 vendor/lib/libstreamparser.so
 
