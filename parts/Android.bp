@@ -15,6 +15,7 @@ android_app {
     privileged: true,
 
     static_libs: [
+        "co.aospa.framework",
         "co.aospa.resources",
         "//hardware/xiaomi:vendor.xiaomi.hardware.touchfeature-V1.0-java",
     ],

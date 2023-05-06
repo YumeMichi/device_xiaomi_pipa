@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.keyboard;
+package org.lineageos.settings.miio;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Switch;
-import android.util.Log;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -30,45 +29,50 @@ import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 
-import org.lineageos.settings.R;
-import org.lineageos.settings.utils.FileUtils;
+import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 
-public class XiaomiKeyboardSettingsFragment extends PreferenceFragment implements
+import org.lineageos.settings.R;
+
+public class MiIOSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private static final String KEYBOARD_KEY = "keyboard_switch_key";
-    private static final String TAG = "XiaomiParts";
-    public static final String SHARED_KEYBOARD = "shared_keyboard";
+    private static final String STYLUS_KEY = "stylus_switch_key";
+    public static final String SHARED_STYLUS = "shared_stylus";
 
-    private SwitchPreference mKeyboardPreference;
+    private SwitchPreference mStylusPreference;
+    private ITouchFeature mTouchFeature;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.keyboard_settings);
-        mKeyboardPreference = (SwitchPreference) findPreference(KEYBOARD_KEY);
-        mKeyboardPreference.setEnabled(true);
-        mKeyboardPreference.setOnPreferenceChangeListener(this);
+        addPreferencesFromResource(R.xml.miio_settings);
+
+        try {
+            mTouchFeature = ITouchFeature.getService();
+        } catch (Exception e) {
+        }
+        mStylusPreference = (SwitchPreference) findPreference(STYLUS_KEY);
+        mStylusPreference.setEnabled(true);
+        mStylusPreference.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (KEYBOARD_KEY.equals(preference.getKey())) {
-            enableKeyboard((Boolean) newValue ? 1 : 0);
+        if (STYLUS_KEY.equals(preference.getKey())) {
+            enableStylus((Boolean) newValue ? 1 : 0);
         }
         return true;
     }
 
-    private void enableKeyboard(int status) {
-        if (status == 1) {
-            SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_KEYBOARD, Context.MODE_PRIVATE);
+    private void enableStylus(int status) {
+        if (mTouchFeature == null) return;
+        try {
+            mTouchFeature.setTouchMode(20, status);
+            SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_STYLUS, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
-            editor.putInt(SHARED_KEYBOARD, status);
+            editor.putInt(SHARED_STYLUS, status);
             editor.commit();
-        } else {
-            SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_KEYBOARD, Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putInt(SHARED_KEYBOARD, status);
-            editor.commit();
+        }
+        catch (Exception e) {
         }
     }
 }

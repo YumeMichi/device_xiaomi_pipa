@@ -33,15 +33,15 @@
     <string name="refresh_standard">60Hz</string>    
     <string name="refresh_extreme">144Hz</string>    
 
+    <!-- Xiaomi IO -->
+    <string name="xiaomi_input_title">Xiaomi Smart devices settings</string>
+    <string name="xiaomi_input_summary">Configuration of Xiaomi Smart Pen and keyboard</string>
+
     <!-- Xiaomi Stylus -->
-    <string name="stylus_title">Xiaomi Stylus</string>
-    <string name="stylus_summary">Xiaomi Stylus Settings</string>
     <string name="stylus_switch_title">Enable Xiaomi Stylus</string>
     <string name="stylus_switch_summary">Enable this settings to use Xiaomi stylus</string>
 
     <!-- Xiaomi Keyboard -->
-    <string name="keyboard_title">Xiaomi Keyboard</string>
-    <string name="keyboard_summary">Xiaomi Keyboard Settings</string>
-    <string name="keyboard_switch_title">Enable Xiaomi Keyboard</string>
-    <string name="keyboard_switch_summary">Enable this settings to use Xiaomi Keyboard</string>
+    <string name="keyboard_switch_title">Always show virtual keyboard</string>
+    <string name="keyboard_switch_summary">After enabling this option, you can use the virtual on-screen keyboard.</string>
 </resources>

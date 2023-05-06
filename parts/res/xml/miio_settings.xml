@@ -16,12 +16,18 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/stylus_title">
+    android:title="@string/xiaomi_input_title">
 
     <SwitchPreference
         android:key="stylus_switch_key"
         android:defaultValue="false"
         android:title="@string/stylus_switch_title"
         android:summary="@string/stylus_switch_summary"/>
+
+    <co.aospa.framework.preference.SecureSettingSwitchPreference
+        android:key="show_ime_with_hard_keyboard"
+        android:defaultValue="false"
+        android:title="@string/keyboard_switch_title"
+        android:summary="@string/keyboard_switch_summary"/>
 
 </PreferenceScreen>

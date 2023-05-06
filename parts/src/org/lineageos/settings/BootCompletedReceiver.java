@@ -26,7 +26,6 @@ import android.util.Log;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.utils.FileUtils;
-import org.lineageos.settings.keyboard.XiaomiKeyboardUtils;
 
 import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 
@@ -52,6 +51,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             mTouchFeature.setTouchMode(20, stylus_prefs.getInt(SHARED_STYLUS, 0));
         } catch (Exception e) {
         }
-        XiaomiKeyboardUtils.startService(context);
+
     }
 }

@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.keyboard;
+package org.lineageos.settings.miio;
 
 import android.os.Bundle;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.R;
 
-public class XiaomiKeyboardSettingsActivity extends CollapsingToolbarBaseActivity {
+public class MiIOSettingsActivity extends CollapsingToolbarBaseActivity {
 
-    private static final String TAG_KEYBOARD = "keyboard";
+    private static final String TAG_STYLUS = "stylus";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         getFragmentManager().beginTransaction().replace(R.id.content_frame,
-                new XiaomiKeyboardSettingsFragment(), TAG_KEYBOARD).commit();
+                new MiIOSettingsFragment(), TAG_STYLUS).commit();
     }
 }
