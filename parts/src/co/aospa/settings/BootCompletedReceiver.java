@@ -24,6 +24,7 @@ import android.util.Log;
 
 import co.aospa.settings.thermal.ThermalUtils;
 import co.aospa.settings.refreshrate.RefreshUtils;
+import co.aospa.settings.peripheralmanager.KeyboardUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -35,5 +36,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         ThermalUtils.startService(context);
         RefreshUtils.startService(context);
+        KeyboardUtils.setup(context);
     }
 }
