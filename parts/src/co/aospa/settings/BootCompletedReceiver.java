@@ -25,6 +25,7 @@ import android.util.Log;
 import co.aospa.settings.thermal.ThermalUtils;
 import co.aospa.settings.refreshrate.RefreshUtils;
 import co.aospa.settings.peripheralmanager.KeyboardUtils;
+import co.aospa.settings.peripheralmanager.PenUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -37,5 +38,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         ThermalUtils.startService(context);
         RefreshUtils.startService(context);
         KeyboardUtils.setup(context);
+        PenUtils.setup(context);
     }
 }
