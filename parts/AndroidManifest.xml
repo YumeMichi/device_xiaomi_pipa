@@ -90,7 +90,8 @@
         <activity
             android:name=".miio.MiIOSettingsActivity"
             android:label="@string/xiaomi_input_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:theme="@style/Theme.SubSettingsBase"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
