@@ -30,6 +30,7 @@ android_app {
 
 cc_binary {
     name: "xiaomi-pen",
+    vendor: true,
     srcs: [
         "xiaomi-pen.cpp",
     ],
