@@ -40,7 +40,7 @@ public class PenUtils {
 
     public static void disablePenMode() {
         Log.d(TAG, "disablePenMode: Disable Pen Mode");
-        SystemProperties.set("persist.vendor.parts.pen", "0");
+        SystemProperties.set("persist.vendor.parts.pen", "2");
     }
 
     private static void refreshPenMode() {
