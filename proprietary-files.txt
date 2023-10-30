@@ -633,14 +633,6 @@ vendor/etc/init/init.qti.qcv.rc
 vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
-# QDMA
-vendor/app/QCC-TR-UI/QCC-TR-UI.apk
-vendor/bin/qcc-trd
-vendor/etc/init/init.qdmastats.rc
-vendor/lib64/libqcc_file_agent.so
-vendor/lib64/libqdma_file_agent.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-
 # QMI
 vendor/bin/qrtr-ns
 vendor/lib64/libdsutils.so
