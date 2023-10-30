@@ -13,11 +13,14 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
    CarrierServices \
    com.google.android.dialer.support \
+   Contacts \
    Dialer \
+   GoogleContacts \
    GoogleDialer \
    Messages \
    messaging \
-   Mms
+   Mms \
+   TeleService
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
