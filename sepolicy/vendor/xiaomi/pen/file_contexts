@@ -1,0 +1,5 @@
+# Pen
+/vendor/bin/xiaomi-pen		u:object_r:xiaomi_pen_exec:s0
+
+# Xiaomi Touch
+/dev/xiaomi-touch			u:object_r:xiaomi_touch_device:s0

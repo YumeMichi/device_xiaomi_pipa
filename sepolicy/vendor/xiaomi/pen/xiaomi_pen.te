@@ -1,0 +1,8 @@
+# Pen
+type xiaomi_pen, domain;
+
+type xiaomi_pen_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(xiaomi_pen)
+
+allow xiaomi_pen xiaomi_touch_device:chr_file { ioctl open read write };

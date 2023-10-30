@@ -30,6 +30,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/bluetooth \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/camera \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/modem \
+    device/xiaomi/pipa/sepolicy/vendor/xiaomi/pen \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/power_supply \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/sensors \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/thermald \
