@@ -20,53 +20,61 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Switch;
+import android.util.Log;
 
+import android.preference.PreferenceManager;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
-
 import com.android.settingslib.widget.MainSwitchPreference;
 
 import co.aospa.settings.peripheralmanager.PenUtils;
-
 import co.aospa.settings.R;
 
 public class StylusSettingsFragment extends PreferenceFragment implements
-        OnPreferenceChangeListener {
+        SharedPreferences.OnSharedPreferenceChangeListener {
 
+    private static final String TAG = "XiaomiPeripheralManagerPenUtils";
     private static final String STYLUS_KEY = "stylus_switch_key";
-    public static final String SHARED_STYLUS = "shared_stylus_force";
 
-    private SwitchPreference mStylusPreference;
+    private SharedPreferences mStylusPreference;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.stylus_settings);
 
-        SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_STYLUS, Context.MODE_PRIVATE);
+        mStylusPreference = PreferenceManager.getDefaultSharedPreferences(getContext());
+        SwitchPreference switchPreference = (SwitchPreference) findPreference(STYLUS_KEY);
 
-        mStylusPreference = (SwitchPreference) findPreference(STYLUS_KEY);
-        mStylusPreference.setChecked(preferences.getInt(SHARED_STYLUS, 0) == 1);
-        mStylusPreference.setEnabled(true);
-        mStylusPreference.setOnPreferenceChangeListener(this);
+        switchPreference.setChecked(mStylusPreference.getBoolean(STYLUS_KEY, false));
+        switchPreference.setEnabled(true);
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (STYLUS_KEY.equals(preference.getKey())) {
-            forceStylus((Boolean) newValue ? 1 : 0);
-        }
-        return true;
+    public void onResume() {
+        super.onResume();
+        mStylusPreference.registerOnSharedPreferenceChangeListener(this);
     }
 
-    private void forceStylus(int status) {
-        SharedPreferences preferences = getActivity().getSharedPreferences(SHARED_STYLUS, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putInt(SHARED_STYLUS, status);
-        editor.commit();
-        if (status == 1)
+    @Override
+    public void onPause() {
+        super.onPause();
+        mStylusPreference.unregisterOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreference, String key) {
+        if (STYLUS_KEY.equals(key)) {
+            forceStylus(mStylusPreference.getBoolean(key, false));
+        }
+    }
+
+    private void forceStylus(boolean status) {
+        mStylusPreference.edit().putBoolean(STYLUS_KEY, status).apply();
+
+        if (status)
             PenUtils.enablePenMode();
        else
             PenUtils.disablePenMode();

@@ -13,6 +13,7 @@ import android.os.SystemProperties;
 import android.util.Log;
 import android.view.InputDevice;
 
+import android.preference.PreferenceManager;
 import android.content.SharedPreferences;
 
 public class PenUtils {
@@ -22,15 +23,15 @@ public class PenUtils {
 
     private static InputManager mInputManager;
 
-    public static final String SHARED_STYLUS = "shared_stylus_force";
+    private static final String STYLUS_KEY = "stylus_switch_key";
 
     private static SharedPreferences preferences;
 
     public static void setup(Context context) {
         mInputManager = (InputManager) context.getSystemService(Context.INPUT_SERVICE);
-        refreshPenMode();
         mInputManager.registerInputDeviceListener(mInputDeviceListener, null);
-        SharedPreferences preferences = context.getSharedPreferences(SHARED_STYLUS, Context.MODE_PRIVATE);
+        preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        refreshPenMode();
     }
 
     public static void enablePenMode() {
@@ -45,7 +46,7 @@ public class PenUtils {
 
     private static void refreshPenMode() {
         for (int id : mInputManager.getInputDeviceIds()) {
-            if (isDeviceXiaomiPen(id) || preferences.getInt(SHARED_STYLUS, 0) == 1) {
+            if (isDeviceXiaomiPen(id) || preferences.getBoolean(STYLUS_KEY, false)) {
                 if (DEBUG) Log.d(TAG, "refreshPenMode: Found Xiaomi Pen");
                 enablePenMode();
                 return;
