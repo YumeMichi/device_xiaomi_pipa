@@ -157,7 +157,9 @@
     <item name="wifi.controller.idle">1</item>
     <item name="wifi.controller.rx">152</item>
     <item name="wifi.controller.tx">190</item>
-    <array name="wifi.controller.tx_levels">1 </array>
+    <array name="wifi.controller.tx_levels">
+        <value>1</value>
+    </array>
     <item name="wifi.controller.voltage">3700</item>
     <array name="wifi.batchedscan">
         <value>.0002</value>
@@ -182,4 +184,5 @@
         <value>0</value>
     </array>
     <item name="gps.voltage">0</item>
+    <item name="bluetooth.controller.voltage">3300</item>
 </device>
