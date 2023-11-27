@@ -47,6 +47,9 @@ on boot
 
     start xiaomi-keyboard
 
+    # WiFi country code
+    setprop ro.boot.wificountrycode US
+
 on property:vendor.post_boot.parsed=1
     # configure input boost settings
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1344000"
