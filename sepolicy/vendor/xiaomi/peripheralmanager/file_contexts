@@ -1,6 +1,3 @@
-# Pen
-/vendor/bin/xiaomi-pen		u:object_r:xiaomi_pen_exec:s0
-
 # Keyboard
 /vendor/bin/xiaomi-keyboard		u:object_r:xiaomi_keyboard_exec:s0
 

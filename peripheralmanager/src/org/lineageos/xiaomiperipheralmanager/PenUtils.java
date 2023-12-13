@@ -9,7 +9,6 @@ package org.lineageos.xiaomiperipheralmanager;
 import android.content.Context;
 import android.hardware.input.InputManager;
 import android.hardware.input.InputManager.InputDeviceListener;
-import android.os.SystemProperties;
 import android.util.Log;
 import android.view.InputDevice;
 
@@ -36,12 +35,12 @@ public class PenUtils {
 
     public static void enablePenMode() {
         Log.d(TAG, "enablePenMode: Enable Pen Mode");
-        SystemProperties.set("persist.vendor.parts.pen", "18");
+        TfWrapper.setTouchFeature(new TfWrapper.TfParams(20, 18));
     }
 
     public static void disablePenMode() {
         Log.d(TAG, "disablePenMode: Disable Pen Mode");
-        SystemProperties.set("persist.vendor.parts.pen", "2");
+        TfWrapper.setTouchFeature(new TfWrapper.TfParams(20, 2));
     }
 
     private static void refreshPenMode() {
