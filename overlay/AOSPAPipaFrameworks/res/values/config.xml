@@ -39,6 +39,6 @@
     <bool name="config_pocketModeSupported">false</bool>
 
     <!-- Fingerprint from stock ROM -->
-    <string name="config_stockFingerprint" translatable="false">Xiaomi/pipa_global/pipa:13/RKQ1.211001.001/V14.0.8.0.TMZMIXM:user/release-keys</string>
+    <string name="config_stockFingerprint" translatable="false">Xiaomi/pipa_global/pipa:13/RKQ1.211001.001/V14.0.11.0.TMZMIXM:user/release-keys</string>
 
 </resources>
