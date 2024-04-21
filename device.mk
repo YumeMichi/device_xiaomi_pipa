@@ -389,6 +389,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     RemoveTelephonyPackages
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.settings.large_screen_opt.enabled=true
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # Thermal
