@@ -215,7 +215,7 @@ PRODUCT_COPY_FILES += \
 
 # Multi-Gen LRU
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.device_config.mglru_native.lru_gen_config=core
+    persist.device_config.mglru_native.lru_gen_config=core_and_mm_walk
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
