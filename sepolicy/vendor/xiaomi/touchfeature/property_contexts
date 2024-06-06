@@ -1,0 +1,2 @@
+# Touchfeature HAL
+ro.vendor.touchfeature.type              u:object_r:vendor_touchfeature_prop:s0

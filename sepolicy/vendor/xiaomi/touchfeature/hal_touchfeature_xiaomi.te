@@ -1,0 +1,24 @@
+# Allow touchfeature HAL to read touchfeature property
+get_prop(hal_touchfeature_xiaomi_default, vendor_touchfeature_prop)
+
+# Allow touchfeature HAL to set touchfeature property
+set_prop(hal_touchfeature_xiaomi_default, vendor_touchfeature_prop)
+
+# Establish HAL client and server comminication
+binder_call(hal_touchfeature_xiaomi_server, hal_touchfeature_xiaomi_client);
+
+# Allow touchfeature HAL to communicate with system_server
+binder_call(hal_touchfeature_xiaomi_default, system_server);
+
+# Allow touchfeature HAL to communicate with surfaceflinger
+binder_call(hal_touchfeature_xiaomi_default, surfaceflinger);
+
+# Allow touchfeature HAL to read/write to /dev/xiaomi-touch device
+allow hal_touchfeature_xiaomi_default xiaomi_touch_device:chr_file rw_file_perms;
+
+init_daemon_domain(hal_touchfeature_xiaomi_default)
+
+hal_server_domain(hal_touchfeature_xiaomi_default, hal_touchfeature_xiaomi)
+add_hwservice(hal_touchfeature_xiaomi_server, hal_touchfeature_xiaomi_hwservice)
+
+vndbinder_use(hal_touchfeature_xiaomi)

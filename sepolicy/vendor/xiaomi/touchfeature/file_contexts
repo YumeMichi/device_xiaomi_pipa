@@ -1,0 +1,2 @@
+# Touchfeature HAL
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service   u:object_r:hal_touchfeature_xiaomi_default_exec:s0

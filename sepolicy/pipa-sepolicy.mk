@@ -22,7 +22,8 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/xiaomi/pipa/sepolicy/private/xiaomi/display
 
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    device/xiaomi/pipa/sepolicy/public/xiaomi/devicesettings
+    device/xiaomi/pipa/sepolicy/public/xiaomi/devicesettings \
+    device/xiaomi/pipa/sepolicy/public/xiaomi/touchfeature
 
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/audio \
@@ -36,6 +37,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/sensors \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/thermald \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/touch \
+    device/xiaomi/pipa/sepolicy/vendor/xiaomi/touchfeature \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/usb \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/wireless \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/wlan
