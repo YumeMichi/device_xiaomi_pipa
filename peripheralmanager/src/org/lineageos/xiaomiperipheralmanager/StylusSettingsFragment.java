@@ -27,7 +27,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import com.android.settingslib.widget.MainSwitchPreference;
 
 import org.lineageos.xiaomiperipheralmanager.PenUtils;
@@ -46,7 +46,7 @@ public class StylusSettingsFragment extends PreferenceFragment implements
         addPreferencesFromResource(R.xml.stylus_settings);
 
         mStylusPreference = PreferenceManager.getDefaultSharedPreferences(getContext());
-        SwitchPreference switchPreference = (SwitchPreference) findPreference(STYLUS_KEY);
+        SwitchPreferenceCompat switchPreference = (SwitchPreferenceCompat) findPreference(STYLUS_KEY);
 
         switchPreference.setChecked(mStylusPreference.getBoolean(STYLUS_KEY, false));
         switchPreference.setEnabled(true);
