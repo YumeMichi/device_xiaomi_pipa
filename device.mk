@@ -376,6 +376,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tunings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/tunings.txt
 
 # WLAN
+PRODUCT_PACKAGES += \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    firmware_wlan_mac.bin_symlink
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wlan/WCNSS_qcom_cfg_qca6390.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
