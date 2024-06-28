@@ -19,7 +19,7 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
-        "vendor.xiaomi.hw.touchfeature-V1.0-java",
+        "vendor.xiaomi.hardware.touchfeature-V1.0-java",
     ],
 }
 

@@ -9,7 +9,7 @@ package org.lineageos.xiaomiperipheralmanager;
 import android.os.IHwBinder.DeathRecipient;
 import android.util.Log;
 
-import vendor.xiaomi.hw.touchfeature.V1_0.ITouchFeature;
+import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 
 public class TfWrapper {
 
@@ -43,7 +43,7 @@ public class TfWrapper {
         }
         Log.d(TAG, "setTouchFeatureParams: " + params);
         try {
-            touchfeature.setModeValue(0, params.mode, params.value);
+            touchfeature.setTouchMode(params.mode, params.value);
         } catch (Exception e) {
             Log.e(TAG, "setTouchFeatureParams failed!", e);
         }
