@@ -1,0 +1,2 @@
+allow system_app hal_touchfeature_xiaomi_hwservice:hwservice_manager find;
+binder_call(system_app, hal_touchfeature_xiaomi_default)
