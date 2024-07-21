@@ -94,3 +94,6 @@ service xiaomi-keyboard /vendor/bin/xiaomi-keyboard
     group system input
     oneshot
     disabled
+
+on property:ro.boot.hwlevel=*
+    setprop ro.boot.hardware.revision ${ro.boot.hwlevel}
