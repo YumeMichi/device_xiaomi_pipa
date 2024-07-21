@@ -96,4 +96,4 @@ service xiaomi-keyboard /vendor/bin/xiaomi-keyboard
     disabled
 
 on property:ro.boot.hwlevel=*
-    setprop ro.boot.hardware.revision ${ro.boot.hwlevel}
+    setprop ro.boot.hardware.revision ${ro.boot.hwc}_${ro.boot.hwlevel}_${ro.boot.hwversion}
