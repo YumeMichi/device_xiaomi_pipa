@@ -1,3 +1,5 @@
-# Dolby
+# Allow audio hal to find dolby service
 allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
+
+# Allow audio hal to communicate with dolby service
 binder_call(hal_audio_default, hal_dms_default)
