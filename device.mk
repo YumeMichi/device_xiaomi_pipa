@@ -46,6 +46,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.ring.filter.mask=0 \
     ro.audio.monitorRotation=true \
     ro.config.vc_call_vol_steps=11 \
+    ro.vendor.audio.dolby.dax.support=true \
+    ro.vendor.audio.dolby.surround.enable=true \
     ro.vendor.audio.enhance.support=false \
     ro.vendor.audio.gain.support=true \
     ro.vendor.audio.karaok.support=true \
@@ -58,6 +60,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.us.type=mius \
     ro.vendor.audio.zoom.support=true \
     ro.vendor.audio.zoom.type=1 \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.spkcal.copy.inhal=true \
     vendor.audio.usb.disable.sidetone=true
 
