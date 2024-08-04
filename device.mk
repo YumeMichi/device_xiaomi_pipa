@@ -180,9 +180,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.height_ratio=1.075 \
     ro.com.google.ime.kb_pad_port_b=8
 
-# Health
-TARGET_USE_HIDL_QTI_HEALTH := true
-
 # Init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
