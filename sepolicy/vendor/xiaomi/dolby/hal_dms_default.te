@@ -3,8 +3,15 @@ hal_server_domain(hal_dms_default, hal_dms)
 type hal_dms_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(hal_dms_default)
 
-allow hal_dms_default vendor_data_file:file { rw_file_perms create unlink };
-allow hal_dms_default vendor_data_file:dir { rw_file_perms add_name remove_name };
-allow hal_dms_default mediacodec:binder call;
+# Allow hal_dms_default to create files and directories
+allow hal_dms_default vendor_dolby_data_file:file create_file_perms;
+allow hal_dms_default vendor_dolby_data_file:dir create_dir_perms;
+
+# Allow dms to communicate with mediacodec services
+binder_call(hal_dms_default, mediacodec)
+
+# Allow dms to communicate with audio hal
 binder_call(hal_dms_default, hal_audio_default)
+
+# Allow dms to communicate with dolby app
 binder_call(hal_dms_default, platform_app)
