@@ -838,6 +838,12 @@ vendor/lib64/libsubsystem_control.so
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
+# Thermal (limits-hal)
+vendor/bin/hw/vendor.qti.hardware.limits@1.0-service
+vendor/etc/init/vendor.qti.hardware.limits@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml
+vendor/lib64/vendor.qti.hardware.limits@1.0.so
+
 # Thermal - MIUI
 vendor/bin/mi_thermald|f3238f0f493b7a1ed7fda7d5f506f6d2f6ae4e65
 vendor/bin/thermal-engine|f0d8db5cc6870a1db91897307cb42e5b2e0b8d0c
