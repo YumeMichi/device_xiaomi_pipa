@@ -85,21 +85,30 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
     persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
     persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
     persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
     persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=false \
     persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+    persist.vendor.qcom.bluetooth.enable.swb=false \
+    persist.vendor.qcom.bluetooth.enable.swbpm=false \
     persist.vendor.qcom.bluetooth.scram.enabled=false \
     persist.vendor.qcom.bluetooth.soc=hastings \
     persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
     ro.vendor.bluetooth.wipower=false \
+    vendor.bluetooth.soc=hastings \
     vendor.hw.fm.init=0 \
     vendor.qcom.bluetooth.soc=hastings
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptiver2-aac-ldac \
+    persist.vendor.btstack.connect.peer_earbud=true \
     persist.vendor.btstack.enable.lpa=true \
+    persist.vendor.btstack.enable.splita2dp=true \
+    persist.vendor.btstack.enable.swb=false \
+    persist.vendor.btstack.enable.swbpm=false \
     persist.vendor.btstack.enable.twsplus=true \
-    persist.vendor.bt.a2dp.aac_whitelist=false
+    persist.vendor.btstack.enable.twsplussho=true
 
 # Boot
 PRODUCT_PACKAGES += \
