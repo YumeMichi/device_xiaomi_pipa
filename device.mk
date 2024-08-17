@@ -135,11 +135,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
-    libcamera2ndk_vendor \
-    libstdc++.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    android.hardware.camera.provider@2.4-service_64
 
 # Charging
 PRODUCT_VENDOR_PROPERTIES += \
@@ -247,25 +243,12 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     init.qti.media.sh
 
-PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor \
-    libgui_vendor \
-    libstagefright_softomx.vendor \
-    libstagefright_softomx_plugin.vendor \
-    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
-
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
 # Media (Dolby)
-PRODUCT_PACKAGES += \
-    libavservices_minijail_vendor \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor \
-    libstagefright_foundation-v33
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
 
@@ -409,14 +392,6 @@ $(call inherit-product, vendor/xiaomi/pipa/pipa-vendor.mk)
 # Verified Boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
-
-# VNDK
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
-    android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.keymaster@4.1.vendor \
-    android.hardware.neuralnetworks@1.3.vendor \
-    android.hardware.wifi.hostapd@1.0.vendor
 
 # VPP tunings
 PRODUCT_COPY_FILES += \
