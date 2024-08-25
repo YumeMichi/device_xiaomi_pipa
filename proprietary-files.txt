@@ -251,10 +251,10 @@ vendor/lib64/libAF.so|32cf285e83de29d669a2e856ac957492a0ea809c
 vendor/lib64/libFaceCenterAlgo.so|d0af9d5b2c37792d431bf2c2f687aabb4578d2a8
 vendor/lib64/libSNPE.so|1b20ffb8a092be14f65eb200e5089e353324948c
 vendor/lib64/libXMFaceFocus.so|52e57f5113e4f98d0824574c7a3689deeaeca5a9
-vendor/lib64/libalAILDC.so|035240bfa042b20be8dd8d0ec71c3f43ce367a7b
+vendor/lib64/libalAILDC.so;DISABLE_CHECKELF|035240bfa042b20be8dd8d0ec71c3f43ce367a7b
 vendor/lib64/libalCFR.so|f43298c36502fbd6fdc42ae79f345197eaf87b2d
-vendor/lib64/libalLDC.so|57d7655cfef72214a919c11198c873c78622f490
-vendor/lib64/libalhLDC.so|128c4c25d622559e7b7c1ed3b686e11dd46b3c15
+vendor/lib64/libalLDC.so;DISABLE_CHECKELF|57d7655cfef72214a919c11198c873c78622f490
+vendor/lib64/libalhLDC.so;DISABLE_CHECKELF|128c4c25d622559e7b7c1ed3b686e11dd46b3c15
 vendor/lib64/libbeauty_face_interface.so|e3bcd58f33c195d9b2c3a7e4688a80c468d8aa57
 vendor/lib64/libc++_shared.so|ef6cad49e61581e9fa96cae94a8e101077640f78
 vendor/lib64/libcamera_nn_stub.so|020a6cd6cee8e550f87cf39c1496979139a31961
@@ -274,7 +274,7 @@ vendor/lib64/libmialgo_ie_capture.so|11b844803a2e53221be72bbdd3c2b4722e7ffc42
 vendor/lib64/libmialgo_rfs.so|d27e391187673c06b4931ccf2658ca05dfa6ea44
 vendor/lib64/libmialgo_sd.so|9b75397cb18c8cc52e114d70f0cb1cdee2d8df11
 vendor/lib64/libmialgo_utils.so|ff64ae4cd11f01f3b6ac38fcf1af2b8189eba40d
-vendor/lib64/libmialgoengine.so|d50df5dade976968183e0d39ed28b98c52985679
+vendor/lib64/libmialgoengine.so;DISABLE_CHECKELF|d50df5dade976968183e0d39ed28b98c52985679
 vendor/lib64/libmibokeh_855.so|bfabf53e7be32a507240ac4a1f13beccf492f810
 vendor/lib64/libmi_supernight_raw.so|2a228a80f4cb4df1d28432ed67cfa77bd45f9e30
 vendor/lib64/libmpbase.so|e6b51e2d501f434eea15ecdc275011d1498301ae
@@ -832,7 +832,7 @@ vendor/lib/libvideoutils.so
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
-vendor/lib/libOmxVpp.so
+vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libvppclient.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
@@ -842,7 +842,7 @@ vendor/lib/libvpptestutils.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
-vendor/lib64/libOmxVpp.so
+vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
@@ -886,7 +886,7 @@ vendor/lib/libwfdhdcpcp.so
 vendor/lib/libwfdhdcpservice_proprietary.so
 vendor/lib/libwfdmminterface_proprietary.so
 vendor/lib/libwfdmmservice_proprietary.so
-vendor/lib/libwfdmmsrc_proprietary.so
+vendor/lib/libwfdmmsrc_proprietary.so;DISABLE_CHECKELF
 vendor/lib/libwfdmodulehdcpsession.so
 vendor/lib/libwfdrtsp_proprietary.so
 vendor/lib/libwfdsessionmodule.so
