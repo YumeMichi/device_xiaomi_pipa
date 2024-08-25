@@ -486,15 +486,15 @@ vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/libfastcvdsp_stub.so
--vendor/lib/libfastcvopt.so
+vendor/lib/libfastcvopt.so
 vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 
 # HotwordEnrollment - MIUI
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|99cfd80965c170f4885a7dd62c0eaad1a0c7840f
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk;PRESIGNED|5b155ae44487e96b86117484323b5a05a2653eda
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk;PRESIGNED|7ac4345e772fe62706f8f6ef9c6d6fba503ed9c1
--system_ext/framework/com.android.hotwordenrollment.common.util.jar|a418f5697951468fb93788b6e92d2912e7ae7149
+product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk;PRESIGNED|5b155ae44487e96b86117484323b5a05a2653eda
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk;PRESIGNED|7ac4345e772fe62706f8f6ef9c6d6fba503ed9c1
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|a418f5697951468fb93788b6e92d2912e7ae7149
 
 # IPC Router Security Configuration
 vendor/bin/irsc_util
@@ -807,8 +807,8 @@ vendor/etc/thermal-region-map.conf|3e731c4264878de98002467d7632deea2a6e7239
 vendor/etc/thermal-tgame.conf|2ab4b735fa86971e0b0407bfc694ef863bdd912b
 vendor/etc/thermal-video.conf|c9c95029063ca7fb6f5fb446ddde940c6defd1bb
 vendor/etc/thermald-devices.conf|c2120cd6e70f50aa5e97d8713215a0547ce243b9
--vendor/lib/libthermalclient.so|6ed686c6c39546a7bf532767f6d87808a42b1176
--vendor/lib64/libthermalclient.so|7bcb4af9a6ae8d12bb0b2749c85e2ff1473678aa
+vendor/lib/libthermalclient.so|6ed686c6c39546a7bf532767f6d87808a42b1176
+vendor/lib64/libthermalclient.so|7bcb4af9a6ae8d12bb0b2749c85e2ff1473678aa
 
 # Time
 vendor/app/TimeService/TimeService.apk
@@ -859,7 +859,7 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c
 vendor/lib64/libwvhidl.so|80c5729aa4cd64b0f724af2d0388156cdc61ef1b
 vendor/lib64/libwvkeybox.so|31d4f6e7054a0b432d18429010e1bf73b5e02e2d
 vendor/lib64/mediadrm/libwvdrmengine.so|c04596fe54c90a5f368a646381ef339f946f5283
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 
 # WiFi - MIUI
 vendor/bin/nv_mac|5de575cd0c3d0d5c79dcfd77df87eb69286da800
