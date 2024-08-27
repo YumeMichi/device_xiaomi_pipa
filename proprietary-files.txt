@@ -402,8 +402,8 @@ vendor/etc/camera/model_aiie_cap.dlc|63d45be39faef841f154e18ebf10d087c70838d7
 vendor/etc/camera/model_back.dlc|9fa14bcdf712e9b118f0a7a51621389b051a91de
 vendor/etc/camera/model_front.dlc|925f7994b27016086ec1da28b1165000b7166762
 vendor/etc/camera/person_det_dsp.dlc|6085c93605f187f0618dbed5dd3070c8d4e336bb
-vendor/etc/camera/sceneDetection.xml|fa2442586b9de48c3489baa729b1de9d70dec731
-vendor/etc/camera/sr_params.xml|200e57c4aab4d4fefd3e57141502af710535da99
+vendor/etc/camera/sceneDetection.xml|b662bc468642d37aac387662eefef0efc88af8ee
+vendor/etc/camera/sr_params.xml|e700e8c09cb3dd7edbe509de091777d7a067536f
 vendor/etc/camera/thirdpartgroup.txt|4a0de9e8adcc7f70d3a4336a0cfb302ecf089d5a
 vendor/etc/camera/vidhance_calibration|404ffe1f8ed349661b61bb44895999d22b1174c3
 
@@ -538,7 +538,7 @@ vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|ff827406bbcd1c82e790730bb017
 vendor/etc/dolby/dax-default.xml|d1e43b428d1799db5567ca1ae9ea24c886b88c6d
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/etc/media_codecs_dolby_audio.xml|a794eb15fc198d0285510260025cd99b53fa174f
-vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|e14caab9b769e58a993583c0486d58b30249ca92
 vendor/lib/libdapparamstorage.so|d1952f09354f414238e5bd0f57dd0d3f85b8f769
 vendor/lib/libdeccfg.so|c9ea6a462e3a0d00e31223bf2a9c5dd84beff122
 vendor/lib/libstagefright_soft_ac4dec.so|2403a7f2371776cd477421e16d1530613f54cfe4
