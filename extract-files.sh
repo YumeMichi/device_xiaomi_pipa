@@ -62,6 +62,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/lib/hw/audio.primary.pipa.so)
+            sed -i "s|/vendor/lib/liba2dpoffload\.so|liba2dpoffload_pipa\.so\x00\x00\x00\x00\x00\x00\x00|g" "${2}"
+            sed -i "s|/vendor/lib/libssrec\.so|libssrec_pipa\.so\x00\x00\x00\x00\x00\x00\x00|g" "${2}"
+            ;;
         vendor/lib/libstagefright_soft_ac4dec.so|vendor/lib/libstagefright_soft_ddpdec.so|vendor/lib64/libdlbdsservice.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
