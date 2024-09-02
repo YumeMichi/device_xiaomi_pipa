@@ -202,7 +202,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.pipa.rc \
     init.mi.btmac.sh \
-    init.mi.usb.sh \
     init.qti.dcvs.sh \
     init.target.rc \
     ueventd.pipa.rc
