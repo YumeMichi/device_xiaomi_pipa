@@ -46,12 +46,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.mi.usb.sh",
-    src: "init.mi.usb.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qti.dcvs.sh",
     src: "init.qti.dcvs.sh",
     vendor: true,
