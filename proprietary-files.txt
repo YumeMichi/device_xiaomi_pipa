@@ -164,15 +164,6 @@ vendor/lib/vndk/libxlog.so|dad5169deb3296ca1ff4d7e9546e4229cda277b9
 vendor/lib64/hw/audio.primary.kona.so|e2de513faa05ebff038d22c011a36eafc8532e66
 vendor/lib64/hw/sound_trigger.primary.kona.so|8754ca088aaf59ac576a33ad3823807182e787fa
 vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so|0f59ee3a875a9b01610d324bc95a1bc61f51edc0
-vendor/lib64/libOmxAacDec.so|1dca5f5f66e18e974b02bb90089ff4d21be3b9a0
-vendor/lib64/libOmxAlacDec.so|81a6a5422f5ef03b2011eec8d9c474f4560f144f
-vendor/lib64/libOmxAmrDec.so|420ab678164071b1ef80668a1d620b6c5deb8164
-vendor/lib64/libOmxAmrwbplusDec.so|434c044c36b7151720b3fc64ac00a9b7f8f4ef81
-vendor/lib64/libOmxApeDec.so|0eb3dfcc355914eb8a4b998a4f7ae74a30277955
-vendor/lib64/libOmxEvrcDec.so|a793c523f124535ae7591fe76ca6f2eba3f38d8f
-vendor/lib64/libOmxG711Dec.so|be0ac0d46a99219dce55b272e150d8bfc8f5426b
-vendor/lib64/libOmxQcelp13Dec.so|d3d11987b8dc3c6605ed79b7f34537a325dfbf79
-vendor/lib64/libOmxWmaDec.so|29dd190acf569f0d7e75ad8667fa64a06bfea027
 
 # Audio FX - MIUI
 vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
