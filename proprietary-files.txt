@@ -14,6 +14,7 @@ vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
+vendor/lib/libfastcrc.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsysmon_cdsp_skel.so
@@ -886,6 +887,7 @@ vendor/lib64/vendor.xiaomi.hardware.touchfeature@1.0.so|9fde9a15b87dea68f8004912
 
 # UBWC
 vendor/lib/libstreamparser.so
+vendor/lib/libvideoutils.so
 
 # VPP
 vendor/bin/vppservice
@@ -898,6 +900,9 @@ vendor/lib/libvpphvx.so
 vendor/lib/libvppimmotion.so
 vendor/lib/libvpplibrary.so
 vendor/lib/libvpptestutils.so
+vendor/lib/vendor.qti.hardware.vpp@1.1.so
+vendor/lib/vendor.qti.hardware.vpp@1.2.so
+vendor/lib/vendor.qti.hardware.vpp@1.3.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
@@ -905,6 +910,9 @@ vendor/lib64/libvpphvx.so
 vendor/lib64/libvppimmotion.so
 vendor/lib64/libvpplibrary.so
 vendor/lib64/libvpptestutils.so
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
 # Widevine - MIUI
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|07b8d21fb76abd377428a6d1b52d6aadfc5892a1

@@ -233,6 +233,35 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.lmk.force_inkernel_lmk=true
 
 # Media
+MSM_VIDC_TARGET_LIST := kona
+
+include hardware/qcom/media/conf_files/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+
+PRODUCT_COPY_FILES += \
+    device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxCore \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw \
+    libc2dcolorconvert \
+    init.qti.media.sh
+
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor \
+    libgui_vendor \
+    libstagefright_softomx.vendor \
+    libstagefright_softomx_plugin.vendor \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
+    ro.media.recorder-max-base-layer-fps=60
+
+# Media (Dolby)
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libcodec2_soft_common.vendor \
@@ -300,7 +329,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     charging \
     display \
     init \
-    media \
     overlay \
     perf \
     usb \
