@@ -256,7 +256,6 @@ PRODUCT_PACKAGES += \
     AOSPAPipaSystemUI \
     FrameworksRes23043RP34C \
     FrameworksResTarget \
-    PipaFlipFlap \
     PipaFrameworks \
     PipaSettings \
     PipaSettingsProvider \
@@ -353,7 +352,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
 
 PRODUCT_PACKAGES += \
-    FlipFlap \
     RemoveTelephonyPackages
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
