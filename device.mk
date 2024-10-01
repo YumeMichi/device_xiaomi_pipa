@@ -176,10 +176,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
 
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcrypto-v33.so
+    android.hardware.drm-service.clearkey \
+    libcrypto-v33
 
 # Fastboot
 PRODUCT_PACKAGES += \
@@ -265,14 +263,11 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
+    libsfplugin_ccodec_utils.vendor \
+    libstagefright_foundation-v33
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 # Multi-Gen LRU
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
