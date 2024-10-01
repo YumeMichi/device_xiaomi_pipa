@@ -161,9 +161,6 @@ vendor/lib/libtinycompress.so|88d37c74a1ba4c27910d08a4a6d323612e2da99d
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so|ed13a1c435bbc1320ceedeafab62db39fec2e34d
 vendor/lib/vendor.qti.voiceprint@1.0.so|5325739853aef4d9b7a752cec9e607e4f7e86ebf
 vendor/lib/vndk/libxlog.so|dad5169deb3296ca1ff4d7e9546e4229cda277b9
-vendor/lib64/hw/audio.primary.kona.so|e2de513faa05ebff038d22c011a36eafc8532e66
-vendor/lib64/hw/sound_trigger.primary.kona.so|8754ca088aaf59ac576a33ad3823807182e787fa
-vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so|0f59ee3a875a9b01610d324bc95a1bc61f51edc0
 
 # Audio FX - MIUI
 vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
