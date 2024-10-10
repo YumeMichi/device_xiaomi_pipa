@@ -17,6 +17,7 @@ LOCAL_OVERRIDES_PACKAGES := \
    Dialer \
    GoogleContacts \
    GoogleDialer \
+   Maps \
    Messages \
    messaging \
    Mms \
