@@ -597,6 +597,18 @@ vendor/lib64/libsoc_helper_jni.so
 
 # QMI
 vendor/bin/qrtr-ns
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libmdmdetect.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+vendor/lib/libqrtr.so
+vendor/lib/libqsocket.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
