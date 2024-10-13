@@ -101,7 +101,6 @@ vendor/etc/sound_trigger_mixer_paths.xml|ce21d04043ea0d1c5023f2c52cc6ca2d39a7cb9
 vendor/etc/sound_trigger_platform_info.xml|21dc0a8b1ce481b6614f2889dd5f21367cc1170c
 
 # Audio - MIUI
-vendor/bin/audioflacapp|b8277fa951476e4212380c5d29f8d9732e38eb32
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb|0e1d6015a4f8b1832d3229331816c1298bbe699b
 vendor/etc/acdbdata/Forte/Forte_General_cal.acdb|1b2b717b02e27cd12a4fab0250067f48cdaf494e
 vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb|6ebfb1d45c5cd90bffd234365a994eb35b52abb3
