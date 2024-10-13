@@ -226,7 +226,7 @@ vendor/lib64/camera/fdconfigpreview.bin|a9f2f5925c713f8c500268ff0fe5c9d4ab46d16e
 vendor/lib64/camera/fdconfigpreviewlite.bin|a9f2f5925c713f8c500268ff0fe5c9d4ab46d16e
 vendor/lib64/camera/fdconfigvideo.bin|a9f2f5925c713f8c500268ff0fe5c9d4ab46d16e
 vendor/lib64/camera/fdconfigvideolite.bin|a9f2f5925c713f8c500268ff0fe5c9d4ab46d16e
-vendor/lib64/com.qti.feature2.anchorsync.so|78f5bbb3a7ec3681654fcbffdbdb5c6a49b41ce4
+vendor/lib64/com.qti.feature2.anchorsync.so;DISABLE_CHECKELF|78f5bbb3a7ec3681654fcbffdbdb5c6a49b41ce4
 vendor/lib64/com.qti.feature2.demux.so|d694ed7dcd1f01e52c7d448df4f099a70000a361
 vendor/lib64/com.qti.feature2.frameselect.so|32ace316efe03942fdcd6781572b4b2a4e43cabd
 vendor/lib64/com.qti.feature2.fusion.so|cc0f85ec40ae183f8b2c179956a2b63d8709ce35
@@ -252,7 +252,7 @@ vendor/lib64/libFaceCenterAlgo.so|d0af9d5b2c37792d431bf2c2f687aabb4578d2a8
 vendor/lib64/libSNPE.so|1b20ffb8a092be14f65eb200e5089e353324948c
 vendor/lib64/libXMFaceFocus.so|52e57f5113e4f98d0824574c7a3689deeaeca5a9
 vendor/lib64/libalAILDC.so;DISABLE_CHECKELF|035240bfa042b20be8dd8d0ec71c3f43ce367a7b
-vendor/lib64/libalCFR.so|f43298c36502fbd6fdc42ae79f345197eaf87b2d
+vendor/lib64/libalCFR.so;DISABLE_CHECKELF|f43298c36502fbd6fdc42ae79f345197eaf87b2d
 vendor/lib64/libalLDC.so;DISABLE_CHECKELF|57d7655cfef72214a919c11198c873c78622f490
 vendor/lib64/libalhLDC.so;DISABLE_CHECKELF|128c4c25d622559e7b7c1ed3b686e11dd46b3c15
 vendor/lib64/libbeauty_face_interface.so|e3bcd58f33c195d9b2c3a7e4688a80c468d8aa57
@@ -269,19 +269,19 @@ vendor/lib64/libchilog.so|f7f8f395d826f66c5b04f2c25981f0d96ae38ac9
 vendor/lib64/libcom.qti.chinodeutils.so|6db86a66395910a29adbb2fe714e4a9b9410c75b
 vendor/lib64/libdualcam_optical_zoom_control.so|87a0507f8115488666a2a65a6237e80086854d7c
 vendor/lib64/libipebpsstriping.so|0894e54002e18443481f0b90e87c32fcc8783c38
-vendor/lib64/libmiai_portraitsupernight.so|2f3055e4d22aa7e53c7ad8120d658fa27582dc37
-vendor/lib64/libmialgo_ie_capture.so|11b844803a2e53221be72bbdd3c2b4722e7ffc42
-vendor/lib64/libmialgo_rfs.so|d27e391187673c06b4931ccf2658ca05dfa6ea44
+vendor/lib64/libmiai_portraitsupernight.so;DISABLE_CHECKELF|2f3055e4d22aa7e53c7ad8120d658fa27582dc37
+vendor/lib64/libmialgo_ie_capture.so;DISABLE_CHECKELF|11b844803a2e53221be72bbdd3c2b4722e7ffc42
+vendor/lib64/libmialgo_rfs.so;DISABLE_CHECKELF|d27e391187673c06b4931ccf2658ca05dfa6ea44
 vendor/lib64/libmialgo_sd.so|9b75397cb18c8cc52e114d70f0cb1cdee2d8df11
 vendor/lib64/libmialgo_utils.so|ff64ae4cd11f01f3b6ac38fcf1af2b8189eba40d
 vendor/lib64/libmialgoengine.so;DISABLE_CHECKELF|d50df5dade976968183e0d39ed28b98c52985679
-vendor/lib64/libmibokeh_855.so|bfabf53e7be32a507240ac4a1f13beccf492f810
-vendor/lib64/libmi_supernight_raw.so|2a228a80f4cb4df1d28432ed67cfa77bd45f9e30
+vendor/lib64/libmibokeh_855.so;DISABLE_CHECKELF|bfabf53e7be32a507240ac4a1f13beccf492f810
+vendor/lib64/libmi_supernight_raw.so;DISABLE_CHECKELF|2a228a80f4cb4df1d28432ed67cfa77bd45f9e30
 vendor/lib64/libmpbase.so|e6b51e2d501f434eea15ecdc275011d1498301ae
 vendor/lib64/libnanopb.so|c9009f4d360cf826e6a3dadaab4f976f97c9384d
 vendor/lib64/libofflinelog.so|c802af36d5e8f8c711102e5d36f1010a1794b1a9
 vendor/lib64/libos.so|8079ca803f47140e849aa232ce91f5dcb996db99
-vendor/lib64/librawnrv2_shared.so|02e4172cc48236338d037b5c43e6eb43fe2467a3
+vendor/lib64/librawnrv2_shared.so;DISABLE_CHECKELF|02e4172cc48236338d037b5c43e6eb43fe2467a3
 vendor/lib64/libsnpe_adsp.so|f57ef8b30d3ece5bc3a88e12b5f3b7c6d99adae5
 vendor/lib64/libsnpe_dsp_domains.so|cdfc591a8160d00ba49d7be9f5f7d7a54d42d4d1
 vendor/lib64/libsnpe_dsp_domains_system.so|07bbbe9a35177851ea28bb0f2db98c41ad1e16ea
@@ -312,9 +312,9 @@ vendor/lib64/libarcsoft_high_dynamic_range.so|cf5e00c0e649f5aa006945531a131184b7
 vendor/lib64/libarcsoft_low_light_hdr.so|a159fcab0430122fee4f624dda15da7f2136cd41
 vendor/lib64/libarcsoft_mf_superresolution.so|f9d07109c9b44edd6bff88cefabbdafc24c7d84d
 vendor/lib64/libarcsoft_portrait_lighting.so|1bc7b14fe69e617529e4dda74e4ef1081ea2ada0
-vendor/lib64/libarcsoft_portrait_lighting_c.so|ca42fa6fc25e231ca70e1caf80a08b18ccfd3d99
+vendor/lib64/libarcsoft_portrait_lighting_c.so;DISABLE_CHECKELF|ca42fa6fc25e231ca70e1caf80a08b18ccfd3d99
 vendor/lib64/libarcsoft_qnnhtp.so|ba1518a7df84a00c1f3750df87eb15604c06eebd
-vendor/lib64/libarcsoft_super_night_raw.so|642831313c3081e03f7f2ee1e1716a150da92508
+vendor/lib64/libarcsoft_super_night_raw.so;DISABLE_CHECKELF|642831313c3081e03f7f2ee1e1716a150da92508
 
 # Camera (camerax) - MIUI
 vendor/lib64/libcamxexternalformatutils.so|74f89f380fddbda7d3e4f0b73ae3b091f4cbc6f0
@@ -849,7 +849,7 @@ vendor/lib/libvppclient.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvppimmotion.so
-vendor/lib/libvpplibrary.so
+vendor/lib/libvpplibrary.so;DISABLE_CHECKELF
 vendor/lib/libvpptestutils.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
@@ -859,7 +859,7 @@ vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
 vendor/lib64/libvppimmotion.so
-vendor/lib64/libvpplibrary.so
+vendor/lib64/libvpplibrary.so;DISABLE_CHECKELF
 vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
