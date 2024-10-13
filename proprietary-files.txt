@@ -592,6 +592,8 @@ vendor/etc/public.libraries.txt|63cf9169c228ec0b2ecaaf30912779fd4505ccc6
 # QCV
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
+vendor/lib/libsoc_helper.so
+vendor/lib/libsoc_helper_jni.so
 vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
