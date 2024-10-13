@@ -29,6 +29,7 @@ source "${HELPER}"
 function vendor_imports() {
     cat <<EOF >>"$1"
 		"device/xiaomi/pipa",
+		"hardware/xiaomi",
 EOF
 }
 
