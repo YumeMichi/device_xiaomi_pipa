@@ -369,6 +369,7 @@ PRODUCT_PACKAGES += \
     RemoveTelephonyPackages
 
 PRODUCT_PRODUCT_PROPERTIES += \
+    persist.debug.disable_lid_state=true \
     persist.settings.large_screen_opt.enabled=true
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
