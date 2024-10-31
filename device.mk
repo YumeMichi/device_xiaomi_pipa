@@ -412,10 +412,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wlan/WCNSS_qcom_cfg_qca6390.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
-# WFD
-PRODUCT_PACKAGES += \
-    libwfdaac_vendor:32
-
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts

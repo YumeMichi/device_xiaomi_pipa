@@ -26,7 +26,6 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'libOmxCore',
-        'libwfdaac_vendor',
     ): lib_fixup_remove,
     (
         'libmmosal',
