@@ -15,12 +15,14 @@ LOCAL_OVERRIDES_PACKAGES := \
    com.google.android.dialer.support \
    Contacts \
    Dialer \
+   Drive \
    GoogleContacts \
    GoogleDialer \
    Maps \
    Messages \
    messaging \
    Mms \
+   PersonalSafety \
    TeleService
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
