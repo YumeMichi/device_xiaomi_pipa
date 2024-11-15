@@ -792,17 +792,13 @@ vendor/etc/thermal-camera.conf|2983926b8daed174313d36888ee884341869c0d3
 vendor/etc/thermal-class0.conf|65e997a7a5a2f7d6eea759b68c69cbf6761adfda
 vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
 vendor/etc/thermal-india-class0.conf|e02c80f7f495e4ae594c3f44f898feee2898f669
-vendor/etc/thermal-india-mgame.conf|8bf3b3a6d312d23a4b7aad8c4ab46fb0d85818ae
 vendor/etc/thermal-india-normal.conf|ed37065dc22effbfec0594297127d37ea161266e
-vendor/etc/thermal-india-tgame.conf|22b08aa0f39c22d396416349a284ae7d6759bb5e
 vendor/etc/thermal-india-video.conf|4b7c8a45d6169cad16452d959f5f418972086fa8
 vendor/etc/thermal-map-india.conf|c61957c48ee51a73a31603ff03fdec9bd7c42925
 vendor/etc/thermal-map.conf|a6c696a2a90d6f62849ceb0a560cd1eb24af0b3a
-vendor/etc/thermal-mgame.conf|368af94a67e767bb9d4ba16b434547105084f0d4
 vendor/etc/thermal-nolimits.conf|f2ff3bcf41fa2f91bbc344749096f403718e15a4
 vendor/etc/thermal-normal.conf|2c1d8326e4a6053ded4cae29bc40342dfa4449e4
 vendor/etc/thermal-region-map.conf|3e731c4264878de98002467d7632deea2a6e7239
-vendor/etc/thermal-tgame.conf|2ab4b735fa86971e0b0407bfc694ef863bdd912b
 vendor/etc/thermal-video.conf|c9c95029063ca7fb6f5fb446ddde940c6defd1bb
 vendor/etc/thermald-devices.conf|c2120cd6e70f50aa5e97d8713215a0547ce243b9
 vendor/lib/libthermalclient.so|6ed686c6c39546a7bf532767f6d87808a42b1176
