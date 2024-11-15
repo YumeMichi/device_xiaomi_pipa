@@ -352,7 +352,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
 
 PRODUCT_PACKAGES += \
-    RemoveTelephonyPackages
+    RemovePackages
 
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.debug.disable_lid_state=true
