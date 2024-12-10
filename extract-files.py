@@ -26,7 +26,6 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'libOmxCore',
-        'libgrallocutils',
         'libwfdaac_vendor',
     ): lib_fixup_remove,
     (
@@ -45,6 +44,18 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'vendor/lib64/libalAILDC.so',
+        'vendor/lib64/libalLDC.so',
+        'vendor/lib64/libalhLDC.so',
+    ): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    'vendor/lib64/libmiai_portraitsupernight.so': blob_fixup()
+        .add_needed('libc++_shared.so'),
     (
         'vendor/lib64/mediadrm/libwvdrmengine.so',
         'vendor/lib64/libwvhidl.so',
