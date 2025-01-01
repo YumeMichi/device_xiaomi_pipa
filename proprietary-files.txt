@@ -439,6 +439,8 @@ vendor/lib64/libdpps.so
 vendor/lib64/libmm-hdcpmgr.so
 
 # Display (Configs) - MIUI
+product/etc/displayconfig/display_id_4630946808805831297.xml:vendor/etc/displayconfig/display_id_4630946808805831297.xml|3250541e8fb79bc5a69a5bdf3e0112075e3bc841
+product/etc/displayconfig/display_id_4630946922172900481.xml:vendor/etc/displayconfig/display_id_4630946922172900481.xml|3250541e8fb79bc5a69a5bdf3e0112075e3bc841
 vendor/etc/default.lm|ccf299a48b5637d96c1033d56b5094d8dd7767dd
 vendor/etc/ltm_config_xiaomi_m82_36_02_0a_video_mode_dual_dsi_dphy_panel.xml|e3dd0caa2a09a3e843d648c6defddc591138442c
 vendor/etc/ltm_config_xiaomi_m82_42_02_0b_video_mode_dual_dsi_dphy_panel.xml|e3dd0caa2a09a3e843d648c6defddc591138442c
