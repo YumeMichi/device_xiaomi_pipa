@@ -62,6 +62,14 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        odm/etc/dolby/multimedia_dolby_dax_default.xml)
+            [ "$2" = "" ] && return 0
+            sed -i "/volume-leveler-enable/ s/true/false/g" "${2}"
+            ;;
+        odm/bin/hw/vendor.dolby_v3_6.hardware.dms360@2.0-service)
+            [ "$2" = "" ] && return 0
+            grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            ;;
         vendor/lib/hw/audio.primary.pipa.so)
             sed -i "s|/vendor/lib/liba2dpoffload\.so|liba2dpoffload_pipa\.so\x00\x00\x00\x00\x00\x00\x00|g" "${2}"
             sed -i "s|/vendor/lib/libssrec\.so|libssrec_pipa\.so\x00\x00\x00\x00\x00\x00\x00|g" "${2}"
