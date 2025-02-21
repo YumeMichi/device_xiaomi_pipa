@@ -180,6 +180,8 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/display/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Dolby
+TARGET_USES_CUSTOM_C2_MANIFEST := true
+
 PRODUCT_PACKAGES += \
     PipaDolby \
     XiaomiDolby

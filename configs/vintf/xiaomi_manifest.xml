@@ -42,4 +42,16 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Codec2 HAl service -->
+    <hal format="hidl">
+        <name>android.hardware.media.c2</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IComponentStore</name>
+            <instance>default</instance>
+            <instance>default9</instance>
+            <instance>software</instance>
+        </interface>
+   </hal>
 </manifest>

@@ -469,6 +469,22 @@ odm/lib64/soundfx/libswdap_v3_6.so|92dca01e5bc4cd654a1b72197fc744d8e5bb1b74
 odm/lib64/vendor.dolby_v3_6.hardware.dms360@2.0-impl.so|5b5f4b383c03a6aaa759b1cc7f6f0aea7d1f6ba0
 odm/lib64/vendor.dolby_v3_6.hardware.dms360@2.0.so|e62f04117fead61eea7f2593e7ccbb565436a0ee
 
+# Dolby (C2 Codecs) - Moto G54
+system/lib/libstagefright_foundation.so:vendor/lib/libstagefright_foundation-v34_cancunf.so;FIX_SONAME|1efd99c25d49040c8ed563a45c99180fb1ffd158|9357374045de78f09fe561d9ef562c683ed30f62
+system/lib64/libstagefright_foundation.so:vendor/lib64/libstagefright_foundation-v34_cancunf.so;FIX_SONAME|80450cac7dfaeb8c5c9fbc82092fa5ad41263363|e7891159bea7105ff58508298ec9b9af8db49553
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service|768a4736ae7d0bd6015b07d4d92d04310323c6c1
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
+vendor/lib/libdapparamstorage.so:vendor/lib/libdapparamstorage-v34_cancunf.so;FIX_SONAME|25cbb0986684c1ee7e439509a78a985197238c35|bef835460bae69d97ee8dd75573fb2ac7b57d153
+vendor/lib/liboem_specific.so|c746b07e8d2afef27d296109bad83846130efe1d
+vendor/lib/vendor.dolby.hardware.dms@2.0.so|73532d31c8fdad87b69e9cc1724dfc5b02a893e7
+vendor/lib64/libcodec2_soft_ac4dec.so|6a6b0f3fc05db172a044278fc74cd09b23f26ffc|58431ae6f2e0c92a1dcf5a6d6eb92134cf44f365
+vendor/lib64/libcodec2_soft_ddpdec.so|2bb7e748e79a6621294ab98c6e761aea20b8278b|fdbedfcbce7b03f58cd03b75792ffa8d8b3bcc96
+vendor/lib64/libcodec2_store_dolby.so|177daebd62a5345d890ec05b3fd1e9a33d6d003b
+vendor/lib64/libdapparamstorage.so:vendor/lib64/libdapparamstorage-v34_cancunf.so;FIX_SONAME|9e6ae3ec124265e41f222013b9d986d596841fc6|ee7a9e6668d48426e00a75baf20f551285e41a20
+vendor/lib64/libdeccfg.so|1a5693678cff64abc73cf9ddf70bd20f3b21d430|08cbcb457e33cb2b684dbf8359f95a1e06a23611
+vendor/lib64/liboem_specific.so|d4893fe8955c9fc8740060260a34d16477bcbf11
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|45ab26d743b6a56b505447012347493ff41057fc
+
 # FASTCV
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
