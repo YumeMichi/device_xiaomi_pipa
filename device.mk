@@ -231,6 +231,9 @@ $(call soong_config_set_bool,libion,legacy_impl,true)
 PRODUCT_PACKAGES += \
     libjson
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Keymaster
 PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.allow_encrypt_override=true \
