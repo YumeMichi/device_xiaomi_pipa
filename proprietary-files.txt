@@ -449,7 +449,6 @@ vendor/etc/tunings.txt|49dbb961af0131f28a65d6e05b245145f92f5f1e
 
 # Dolby - OnePlus 9RT MT2111_14.0.0.730(EX01)
 odm/bin/hw/vendor.dolby_v3_6.hardware.dms360@2.0-service|7951f0ede5108f0080bb8abb18651058db9e46ae|1a2a6bbf9e21e58a7d92cb527b34f0a6c80bb569
-odm/etc/dolby/multimedia_dolby_dax_default.xml|be49c4cde1bc41f67fbfa2c49ba6d8f4e40eb8dc|885abbd34100dfdfb7a798449f35670a8e661a14
 odm/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc|5da96cf855061860f27dff6399505f8d1f1daeee
 odm/etc/vintf/manifest/manifest_dax_dolby_v3_6.xml|c4704e5bc4da7cdf291c79389f379c8355eaf730
 odm/lib/libdapparamstorage_v3_6.so|c6c36fba280f2373034cf754870611614bf0f22f

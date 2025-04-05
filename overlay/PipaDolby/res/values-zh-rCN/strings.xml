@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023-24 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Dolby profiles -->
+    <string name="dolby_profile_dynamic">动态</string>
+    <string name="dolby_profile_movie">电影</string>
+    <string name="dolby_profile_music">音乐</string>
+    <string name="dolby_profile_custom">自定义</string>
+    <string name="dolby_profile_voice">语音</string>
+
+</resources>
