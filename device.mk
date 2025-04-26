@@ -413,6 +413,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.disable_video_encode_flag=true \
     ro.usb.uvc.enabled=true
 
 # Vendor
