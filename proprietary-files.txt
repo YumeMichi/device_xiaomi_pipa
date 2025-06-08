@@ -551,17 +551,6 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib/libopenvx.so
 vendor/lib64/libopenvx.so
 
-# Neural Networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
-vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
-vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
-vendor/lib64/libhexagon_nn_stub.so
-vendor/lib64/unnhal-acc-adreno.so
-vendor/lib64/unnhal-acc-common.so
-vendor/lib64/unnhal-acc-hvx.so
-
 # PD
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
