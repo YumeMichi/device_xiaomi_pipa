@@ -48,7 +48,7 @@ on boot
     start xiaomi-keyboard
 
     # WiFi country code
-    setprop ro.boot.wificountrycode CN
+    setprop ro.boot.wificountrycode US
 
 on property:vendor.post_boot.parsed=1
     # configure input boost settings
