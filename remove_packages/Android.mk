@@ -11,20 +11,23 @@ LOCAL_MODULE := RemovePackages
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
-   CarrierServices \
-   com.google.android.dialer.support \
-   Contacts \
-   Dialer \
-   Drive \
-   GoogleCameraGo \
-   GoogleContacts \
-   GoogleDialer \
-   Maps \
-   Messages \
-   messaging \
-   Mms \
-   PersonalSafety \
-   TeleService
+    Abstruct \
+    CarrierServices \
+    com.google.android.dialer.support \
+    Contacts \
+    Dialer \
+    Drive \
+    Gmail2 \
+    GoogleCameraGo \
+    GoogleContacts \
+    GoogleDialer \
+    Maps \
+    Messages \
+    messaging \
+    Mms \
+    PersonalSafety \
+    TeleService \
+    YouTube
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
