@@ -108,7 +108,7 @@ vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb|801de492e13ee9462c329a6b1b32fb8
 vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb|417387c1285e45db669f34e33444c0686a150376
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp|0c73fbc51db65bd36365947dbc1b78a22e1028b0
 vendor/etc/acdbdata/adsp_avs_config.acdb|51f049b97e1d0b56faa1cf3713682899f7522c1a
-vendor/lib/hw/audio.primary.kona.so:vendor/lib/hw/audio.primary.pipa.so;FIX_SONAME|166b6ae074ae02d33415a522039e9f100adbb1b1|e80b285c9d5b6ff46638665ca70455ab7c06aa58
+vendor/lib/hw/audio.primary.kona.so:vendor/lib/hw/audio.primary.pipa.so;FIX_SONAME|166b6ae074ae02d33415a522039e9f100adbb1b1|9a598e8b3b62ed17fdb8136531702a1cd95e4ae8
 vendor/lib/hw/sound_trigger.primary.kona.so|24dbebe6bdeafdb9834efda21e22aac48d633e32
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so|ee89b7cb4e0476688ac8c1a669dfe89c660b1a76
 vendor/lib/vndk/libxlog.so|dad5169deb3296ca1ff4d7e9546e4229cda277b9
@@ -125,7 +125,7 @@ vendor/lib/libaudioalsa.so|486cde43c2d135e0cceb862126b56ef0647d3a71
 vendor/lib/libaudiocloudctrl.so|101619a534748f58e76f0dd1b06837aa319f2724
 vendor/lib/libaudioconfigstore.so|1b53f032ae43dd335ada7755642cb62864890165
 vendor/lib/libaudioparsers.so|7569d3f969fe586145970f30c90d395074f577e4
-vendor/lib/libaudioroute_ext.so|9c64c2384952947590b848ace49bfad185d60a61
+vendor/lib/libaudioroute_ext.so|9c64c2384952947590b848ace49bfad185d60a61|8dd1d9457c70718aad57f2374c538207b67e75eb
 vendor/lib/libcapiv2svacnn.so|c897fbba664fcb0ea1951d3220d8db54ae0d7995
 vendor/lib/libcapiv2svarnn.so|97f6bd6b25479fbf0f4f7cb06d9f1a462266f22a
 vendor/lib/libcapiv2vop.so|1cceaefcc1ca55de5bc932a846091e6702c5d508
