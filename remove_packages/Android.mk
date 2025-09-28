@@ -27,6 +27,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     Mms \
     PersonalSafety \
     TeleService \
+    WeatherPixelPrebuilt_24D1 \
     YouTube
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
