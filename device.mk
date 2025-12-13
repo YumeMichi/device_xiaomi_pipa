@@ -370,10 +370,9 @@ PRODUCT_PACKAGES += \
     RemovePackages
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.debug.disable_lid_state=true \
-    persist.settings.large_screen_opt.enabled=true
+    persist.debug.disable_lid_state=true
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/large_screen_common.mk)
 
 # Thermal
 PRODUCT_COPY_FILES += \
