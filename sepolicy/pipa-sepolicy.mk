@@ -13,6 +13,9 @@
 # limitations under the License.
 
 # QCOM Sepolicy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    device/xiaomi/pipa/sepolicy/private/qcom
+
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/pipa/sepolicy/vendor/qcom
 
