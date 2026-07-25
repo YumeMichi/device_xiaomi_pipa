@@ -80,7 +80,7 @@ blob_fixups: blob_fixups_user_type = {
 namespace_imports = [
     'device/xiaomi/pipa',
     'hardware/xiaomi',
-    'vendor/qcom/common/vendor/adreno-r',
+    'vendor/qcom/common/vendor/adreno/r',
     'vendor/qcom/common/vendor/display',
     'vendor/qcom/common/vendor/display/4.19',
     'vendor/qcom/common/vendor/keymaster',

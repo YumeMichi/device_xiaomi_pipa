@@ -394,7 +394,6 @@ vendor/lib64/libmulticam_optical_zoom_control.so|e72adf2073f1c87c5854e49ddf5d1d6
 
 # Charger - MIUI
 vendor/bin/batterysecret|601126ca842ce35b2922e0b19bccfdf9f99ece15
-vendor/bin/hvdcp_opti;MODULE_SUFFIX=_pipa;OVERRIDES=hvdcp_opti|d3dae2d3c64df366b82d11deb100af4d8813131f
 vendor/etc/init/init.batterysecret.rc|9abbe6fd82a0bd5b4499bfe141a5645e76e57606
 
 # Config Store
