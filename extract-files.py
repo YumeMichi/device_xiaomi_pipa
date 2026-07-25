@@ -83,6 +83,7 @@ namespace_imports = [
     'vendor/qcom/common/vendor/adreno-r',
     'vendor/qcom/common/vendor/display',
     'vendor/qcom/common/vendor/display/4.19',
+    'vendor/qcom/common/vendor/keymaster',
     'vendor/qcom/common/vendor/media/legacy',
 ]
 

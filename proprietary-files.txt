@@ -504,21 +504,6 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar|df689dc9f599f
 # IPC Router Security Configuration
 vendor/bin/irsc_util
 
-# Keymaster
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
-vendor/bin/keymasterd
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
-vendor/etc/init/keymasterd.rc
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqtikeymaster4.so
-vendor/lib64/libspcom.so
-
 # MDM - MIUI
 vendor/bin/ks|2bcc675556cd146a8a785145f9d2caa1b659b185
 vendor/bin/mdm_helper_proxy|e7ba5764336a32454e4f8de6ff3e1a9c9c2a61bd
@@ -652,7 +637,6 @@ vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libnative-api.so
-vendor/lib64/libqcbor.so
 
 # Sensors - MIUI
 vendor/bin/init.qcom.sensors.sh|5b38688acaf5f4a2e973b72d236a06498703a023
