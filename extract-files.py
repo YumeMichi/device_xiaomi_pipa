@@ -45,8 +45,6 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    'odm/bin/hw/vendor.dolby_v3_6.hardware.dms360@2.0-service': blob_fixup()
-        .add_needed('libstagefright_foundation-v33.so'),
     'vendor/lib/libaudioroute_ext.so': blob_fixup()
         .replace_needed(
             'libaudioroute.so',
@@ -64,19 +62,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libaudioroute.so',
             'libaudioroute-v34.so',
-        ),
-    (
-        'vendor/lib64/libcodec2_soft_ac4dec.so',
-        'vendor/lib64/libcodec2_soft_ddpdec.so',
-    ): blob_fixup()
-        .replace_needed(
-            'libstagefright_foundation.so',
-            'libstagefright_foundation-v34_cancunf.so',
-        ),
-    'vendor/lib64/libdeccfg.so': blob_fixup()
-        .replace_needed(
-            'libdapparamstorage.so',
-            'libdapparamstorage-v34_cancunf.so',
         ),
     (
         'vendor/lib64/mediadrm/libwvdrmengine.so',

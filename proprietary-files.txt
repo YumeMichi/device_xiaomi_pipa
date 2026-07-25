@@ -446,44 +446,6 @@ vendor/etc/mdss_dsi_m82_36_02_0a_dual_dphy_video_mi.xml|082c3a06f7b4c8f9fdd9681f
 vendor/etc/mdss_dsi_m82_42_02_0b_dual_dphy_video_mi.xml|082c3a06f7b4c8f9fdd9681fbe14de84489aabc3
 vendor/etc/tunings.txt|49dbb961af0131f28a65d6e05b245145f92f5f1e
 
-# Dolby - OnePlus 9RT MT2111_14.0.0.730(EX01)
-odm/bin/hw/vendor.dolby_v3_6.hardware.dms360@2.0-service|1a2a6bbf9e21e58a7d92cb527b34f0a6c80bb569
-odm/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc|5da96cf855061860f27dff6399505f8d1f1daeee
-odm/etc/vintf/manifest/manifest_dax_dolby_v3_6.xml|c4704e5bc4da7cdf291c79389f379c8355eaf730
-odm/lib/libdapparamstorage_v3_6.so|c6c36fba280f2373034cf754870611614bf0f22f
-odm/lib/libdeccfg_v3_6.so|742cadaf61aea20eabdac099668bfd43ddf4bb35
-odm/lib/libdlbdsservice_v3_6.so|eac269dfbf334f4cc9d5900fb1c53dbfbaea4d6b
-odm/lib/libqtigef.so;MODULE_SUFFIX=_odm|c7d588a80c3aac52b160db6ded1528bb8b8fd7bd
-odm/lib/libstagefright_soft_ddpdec_v3_6.so:odm/lib/libstagefright_soft_ddpdec.so;FIX_SONAME|acc62e6a3d78451da99243aba0dfe3f436d5b9a2
-odm/lib/soundfx/libhwdap_v3_6.so|1992eea271d67bef7482377605a2efa4c2f6dba8
-odm/lib/soundfx/libswdap_v3_6.so|3e521eb43ea5b43e2436f2c46d7b8f169b2f1553
-odm/lib/vendor.dolby_v3_6.hardware.dms360@2.0-impl.so|b535d7ebc47cb933fe7654a53cc36a5bfc928639
-odm/lib/vendor.dolby_v3_6.hardware.dms360@2.0.so|d6f89d6499661023dc8fe451ca5c55f1a3ba7d55
-odm/lib64/libdapparamstorage_v3_6.so|d0c9e16ec5a589a9e47a8d3907d7949fd4fdb439
-odm/lib64/libdeccfg_v3_6.so|25a64da2aa3bf9cb2b6fd644547ba1e94cdb47f4
-odm/lib64/libdlbdsservice_v3_6.so|08ae454ff029791ba436f750ca6c717cb6d7bf36
-odm/lib64/libqtigef.so;MODULE_SUFFIX=_odm|09fb25411b4767ab2f7eebdccd7cc7fd9a85feee
-odm/lib64/soundfx/libhwdap_v3_6.so|e4bf45ccd3ae9d4347d1416019d96681b2c651ea
-odm/lib64/soundfx/libswdap_v3_6.so|92dca01e5bc4cd654a1b72197fc744d8e5bb1b74
-odm/lib64/vendor.dolby_v3_6.hardware.dms360@2.0-impl.so|5b5f4b383c03a6aaa759b1cc7f6f0aea7d1f6ba0
-odm/lib64/vendor.dolby_v3_6.hardware.dms360@2.0.so|e62f04117fead61eea7f2593e7ccbb565436a0ee
-
-# Dolby (C2 Codecs) - Moto G54
-system/lib/libstagefright_foundation.so:vendor/lib/libstagefright_foundation-v34_cancunf.so;FIX_SONAME|9357374045de78f09fe561d9ef562c683ed30f62
-system/lib64/libstagefright_foundation.so:vendor/lib64/libstagefright_foundation-v34_cancunf.so;FIX_SONAME|e7891159bea7105ff58508298ec9b9af8db49553
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service|768a4736ae7d0bd6015b07d4d92d04310323c6c1
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
-vendor/lib/libdapparamstorage.so:vendor/lib/libdapparamstorage-v34_cancunf.so;FIX_SONAME|bef835460bae69d97ee8dd75573fb2ac7b57d153
-vendor/lib/liboem_specific.so|c746b07e8d2afef27d296109bad83846130efe1d
-vendor/lib/vendor.dolby.hardware.dms@2.0.so|73532d31c8fdad87b69e9cc1724dfc5b02a893e7
-vendor/lib64/libcodec2_soft_ac4dec.so|58431ae6f2e0c92a1dcf5a6d6eb92134cf44f365
-vendor/lib64/libcodec2_soft_ddpdec.so|fdbedfcbce7b03f58cd03b75792ffa8d8b3bcc96
-vendor/lib64/libcodec2_store_dolby.so|177daebd62a5345d890ec05b3fd1e9a33d6d003b
-vendor/lib64/libdapparamstorage.so:vendor/lib64/libdapparamstorage-v34_cancunf.so;FIX_SONAME|ee7a9e6668d48426e00a75baf20f551285e41a20
-vendor/lib64/libdeccfg.so|08cbcb457e33cb2b684dbf8359f95a1e06a23611
-vendor/lib64/liboem_specific.so|d4893fe8955c9fc8740060260a34d16477bcbf11
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so|45ab26d743b6a56b505447012347493ff41057fc
-
 # FASTCV
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so

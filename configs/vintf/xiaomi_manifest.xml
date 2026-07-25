@@ -50,7 +50,6 @@
         <interface>
             <name>IComponentStore</name>
             <instance>default</instance>
-            <instance>default9</instance>
             <instance>software</instance>
         </interface>
    </hal>
