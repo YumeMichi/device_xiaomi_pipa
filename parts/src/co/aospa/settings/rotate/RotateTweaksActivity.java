@@ -17,11 +17,8 @@
 package co.aospa.settings.rotate;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-
-import co.aospa.settings.rotate.RotateTweaksSettingsFragment;
 
 public class RotateTweaksActivity extends CollapsingToolbarBaseActivity {
 
@@ -30,17 +27,8 @@ public class RotateTweaksActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(
+        getSupportFragmentManager().beginTransaction().replace(
                 com.android.settingslib.collapsingtoolbar.R.id.content_frame,
                 new RotateTweaksSettingsFragment(), TAG_ROTATE).commit();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-            return true;
-        }
-        return false;
     }
 }

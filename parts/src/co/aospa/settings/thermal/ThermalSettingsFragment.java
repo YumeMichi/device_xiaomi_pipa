@@ -36,7 +36,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.preference.PreferenceFragment;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -50,7 +50,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ThermalSettingsFragment extends PreferenceFragment
+public class ThermalSettingsFragment extends Fragment
         implements ApplicationsState.Callbacks {
 
     private AllPackagesAdapter mAllPackagesAdapter;
@@ -63,10 +63,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
     private RecyclerView mAppsRecyclerView;
 
     private ThermalUtils mThermalUtils;
-
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

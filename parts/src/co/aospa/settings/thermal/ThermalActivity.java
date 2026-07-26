@@ -17,7 +17,6 @@
 package co.aospa.settings.thermal;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
@@ -29,17 +28,8 @@ public class ThermalActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(
+        getSupportFragmentManager().beginTransaction().replace(
                 com.android.settingslib.collapsingtoolbar.R.id.content_frame,
                 new ThermalSettingsFragment(), TAG_THERMAL).commit();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-            return true;
-        }
-        return false;
     }
 }

@@ -29,7 +29,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/device_settings_app_name"
         android:persistent="true"
-        android:theme="@style/Theme.SubSettingsBase"
+        android:theme="@style/Theme.SubSettingsBase.Expressive"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
@@ -50,7 +50,7 @@
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
             android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase_v31">
+            android:theme="@style/Theme.SubSettingsBase.Expressive">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -69,7 +69,7 @@
             android:name=".refreshrate.RefreshActivity"
             android:label="@string/refresh_title"
             android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase_v31">
+            android:theme="@style/Theme.SubSettingsBase.Expressive">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -91,7 +91,7 @@
             android:name=".rotate.RotateTweaksActivity"
             android:label="@string/rotate_title"
             android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase_v31">
+            android:theme="@style/Theme.SubSettingsBase.Expressive">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>

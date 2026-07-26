@@ -23,14 +23,14 @@ import android.provider.Settings;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import co.aospa.settings.R;
 
 import java.util.Arrays;
 
 public class RotateTweaksSettingsFragment
-        extends PreferenceFragment implements OnPreferenceChangeListener {
+        extends SettingsBasePreferenceFragment implements OnPreferenceChangeListener {
     private static final String KEY_ROTATE_TWEAKS = "rotate_policy";
 
     private static final String SETTING_ROTATE_POLICY = "aragaki.rotate.policy";
@@ -47,7 +47,7 @@ public class RotateTweaksSettingsFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.rotate_tweaks);
+        setPreferencesFromResource(R.xml.rotate_tweaks, rootKey);
 
         mCR = getActivity().getContentResolver();
 
