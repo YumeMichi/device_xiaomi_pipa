@@ -28,7 +28,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SectionIndexer;
@@ -41,6 +40,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.android.settingslib.applications.ApplicationsState;
+import com.android.settingslib.widget.SettingsSpinnerAdapter;
 
 import co.aospa.settings.R;
 
@@ -219,9 +219,8 @@ public class RefreshSettingsFragment extends Fragment
         }
     }
 
-    private class ModeAdapter extends BaseAdapter {
+    private class ModeAdapter extends SettingsSpinnerAdapter<String> {
 
-        private final LayoutInflater inflater;
         private final int[] items = {
                 R.string.refresh_default,
                 R.string.refresh_standard,
@@ -229,37 +228,16 @@ public class RefreshSettingsFragment extends Fragment
         };
 
         private ModeAdapter(Context context) {
-            inflater = LayoutInflater.from(context);
-        }
-
-        @Override
-        public int getCount() {
-            return items.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return items[position];
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
+            super(context);
+            for (int item : items) {
+                add(context.getString(item));
+            }
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            TextView view;
-            if (convertView != null) {
-                view = (TextView) convertView;
-            } else {
-                view = (TextView) inflater.inflate(android.R.layout.simple_spinner_dropdown_item,
-                        parent, false);
-            }
-
-            view.setText(items[position]);
-            view.setTextSize(14f);
-
+            View view = getDefaultView(position, convertView, parent);
+            ((TextView) view.findViewById(android.R.id.text1)).setText(getItem(position));
             return view;
         }
     }
@@ -301,15 +279,17 @@ public class RefreshSettingsFragment extends Fragment
             if (entry == null) {
                 return;
             }
-            holder.mode.setAdapter(new ModeAdapter(context));
-            holder.mode.setOnItemSelectedListener(this);
             holder.title.setText(entry.label);
             holder.title.setOnClickListener(v -> holder.mode.performClick());
             mApplicationsState.ensureIcon(entry);
             holder.icon.setImageDrawable(entry.icon);
             int packageState = mRefreshUtils.getStateForPackage(entry.info.packageName);
-            holder.mode.setSelection(packageState, false);
+            ModeAdapter modeAdapter = new ModeAdapter(context);
+            modeAdapter.setSelectedPosition(packageState);
             holder.mode.setTag(entry);
+            holder.mode.setAdapter(modeAdapter);
+            holder.mode.setSelection(packageState, false);
+            holder.mode.setOnItemSelectedListener(this);
             holder.stateIcon.setImageResource(getStateDrawable(packageState));
         }
 
@@ -332,6 +312,7 @@ public class RefreshSettingsFragment extends Fragment
             int currentState = mRefreshUtils.getStateForPackage(entry.info.packageName);
             if (currentState != position) {
                 mRefreshUtils.writePackage(entry.info.packageName, position);
+                ((ModeAdapter) parent.getAdapter()).setSelectedPosition(position);
                 notifyDataSetChanged();
             }
         }

@@ -28,7 +28,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SectionIndexer;
@@ -41,6 +40,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.android.settingslib.applications.ApplicationsState;
+import com.android.settingslib.widget.SettingsSpinnerAdapter;
 
 import co.aospa.settings.R;
 
@@ -228,9 +228,8 @@ public class ThermalSettingsFragment extends Fragment
         }
     }
 
-    private class ModeAdapter extends BaseAdapter {
+    private class ModeAdapter extends SettingsSpinnerAdapter<String> {
 
-        private final LayoutInflater inflater;
         private final int[] items = {
                 R.string.thermal_default,
                 R.string.thermal_benchmark,
@@ -242,37 +241,16 @@ public class ThermalSettingsFragment extends Fragment
         };
 
         private ModeAdapter(Context context) {
-            inflater = LayoutInflater.from(context);
-        }
-
-        @Override
-        public int getCount() {
-            return items.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return items[position];
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
+            super(context);
+            for (int item : items) {
+                add(context.getString(item));
+            }
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            TextView view;
-            if (convertView != null) {
-                view = (TextView) convertView;
-            } else {
-                view = (TextView) inflater.inflate(android.R.layout.simple_spinner_dropdown_item,
-                        parent, false);
-            }
-
-            view.setText(items[position]);
-            view.setTextSize(14f);
-
+            View view = getDefaultView(position, convertView, parent);
+            ((TextView) view.findViewById(android.R.id.text1)).setText(getItem(position));
             return view;
         }
     }
@@ -301,12 +279,8 @@ public class ThermalSettingsFragment extends Fragment
         @NonNull
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            ViewHolder holder = new ViewHolder(LayoutInflater.from(parent.getContext())
+            return new ViewHolder(LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.thermal_list_item, parent, false));
-            Context context = holder.itemView.getContext();
-            holder.mode.setAdapter(new ModeAdapter(context));
-            holder.mode.setOnItemSelectedListener(this);
-            return holder;
         }
 
         @Override
@@ -322,8 +296,12 @@ public class ThermalSettingsFragment extends Fragment
             mApplicationsState.ensureIcon(entry);
             holder.icon.setImageDrawable(entry.icon);
             int packageState = mThermalUtils.getStateForPackage(entry.info.packageName);
-            holder.mode.setSelection(packageState, false);
+            ModeAdapter modeAdapter = new ModeAdapter(holder.itemView.getContext());
+            modeAdapter.setSelectedPosition(packageState);
             holder.mode.setTag(entry);
+            holder.mode.setAdapter(modeAdapter);
+            holder.mode.setSelection(packageState, false);
+            holder.mode.setOnItemSelectedListener(this);
             holder.stateIcon.setImageResource(getStateDrawable(packageState));
         }
 
@@ -345,6 +323,7 @@ public class ThermalSettingsFragment extends Fragment
             int currentState = mThermalUtils.getStateForPackage(entry.info.packageName);
             if (currentState != position) {
                 mThermalUtils.writePackage(entry.info.packageName, position);
+                ((ModeAdapter) parent.getAdapter()).setSelectedPosition(position);
                 notifyDataSetChanged();
             }
         }
