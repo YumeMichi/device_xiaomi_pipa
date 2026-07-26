@@ -67,7 +67,7 @@
 
         <activity
             android:name=".refreshrate.RefreshActivity"
-            android:label="@string/refresh_title"
+            android:label="@string/pipa_refresh_title"
             android:exported="true"
             android:theme="@style/Theme.SubSettingsBase.Expressive">
             <intent-filter>
@@ -78,7 +78,7 @@
                 android:value="com.android.settings.category.ia.display" />
             <meta-data
                 android:name="com.android.settings.summary"
-                android:resource="@string/refresh_summary" />
+                android:resource="@string/pipa_refresh_summary" />
         </activity>
 
         <service

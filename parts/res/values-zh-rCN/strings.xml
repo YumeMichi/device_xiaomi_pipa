@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Per-app refresh rate -->
+    <string name="pipa_refresh_title">应用刷新率</string>
+    <string name="pipa_refresh_summary">为特定应用设置最高刷新率</string>
+    <string name="pipa_refresh_default">默认</string>
+
     <!-- Rotate Tweaks -->
     <string name="rotate_title">旋转锁定行为</string>
     <string name="rotate_summary">更多旋转锁定设置</string>

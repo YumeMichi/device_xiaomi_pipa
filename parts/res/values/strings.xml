@@ -27,12 +27,12 @@
     <string name="thermal_streaming">Streaming</string>
 
     <!-- Per-app refresh rate -->
-    <string name="refresh_title">Per-app refresh rate</string>
-    <string name="refresh_summary">Set the maximum refresh rate for a specific application</string>
-    <string name="refresh_default">Default</string>
-    <string translatable="false" name="refresh_standard">60Hz</string>
-    <string translatable="false" name="refresh_high">120Hz</string>
-    <string translatable="false" name="refresh_extreme">144Hz</string>
+    <string name="pipa_refresh_title">Per-app refresh rate</string>
+    <string name="pipa_refresh_summary">Set the maximum refresh rate for a specific application</string>
+    <string name="pipa_refresh_default">Default</string>
+    <string translatable="false" name="pipa_refresh_60hz">60Hz</string>
+    <string translatable="false" name="pipa_refresh_120hz">120Hz</string>
+    <string translatable="false" name="pipa_refresh_144hz">144Hz</string>
 
     <!-- Rotate Tweaks -->
     <string name="rotate_title">Rotation Lock Tweaks</string>

@@ -96,7 +96,7 @@ public class RefreshSettingsFragment extends Fragment
     @Override
     public void onResume() {
         super.onResume();
-        getActivity().setTitle(getResources().getString(R.string.refresh_title));
+        getActivity().setTitle(getResources().getString(R.string.pipa_refresh_title));
         rebuild();
     }
 
@@ -224,10 +224,10 @@ public class RefreshSettingsFragment extends Fragment
     private class ModeAdapter extends SettingsSpinnerAdapter<String> {
 
         private final int[] items = {
-                R.string.refresh_default,
-                R.string.refresh_standard,
-                R.string.refresh_high,
-                R.string.refresh_extreme
+                R.string.pipa_refresh_default,
+                R.string.pipa_refresh_60hz,
+                R.string.pipa_refresh_120hz,
+                R.string.pipa_refresh_144hz
         };
 
         private ModeAdapter(Context context) {
