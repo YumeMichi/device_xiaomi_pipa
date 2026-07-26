@@ -38,13 +38,16 @@ public final class RefreshUtils {
 
     protected static final int STATE_DEFAULT = 0;
     protected static final int STATE_STANDARD = 1;
-    protected static final int STATE_EXTREME = 2;
+    protected static final int STATE_HIGH = 2;
+    protected static final int STATE_EXTREME = 3;
 
     private static final float REFRESH_STATE_DEFAULT = 144f;
     private static final float REFRESH_STATE_STANDARD = 60f;
+    private static final float REFRESH_STATE_HIGH = 120f;
     private static final float REFRESH_STATE_EXTREME = 144f;
 
     private static final String REFRESH_STANDARD = "refresh.standard=";
+    private static final String REFRESH_HIGH = "refresh.high=";
     private static final String REFRESH_EXTREME = "refresh.extreme=";
 
     private SharedPreferences mSharedPrefs;
@@ -73,8 +76,14 @@ public final class RefreshUtils {
         String value = mSharedPrefs.getString(REFRESH_CONTROL, null);
 
         if (value == null || value.isEmpty()) {
-            value = REFRESH_STANDARD + ":" + REFRESH_EXTREME;
+            value = REFRESH_STANDARD + ":" + REFRESH_HIGH + ":" + REFRESH_EXTREME;
             writeValue(value);
+        } else {
+            String[] modes = value.split(":", -1);
+            if (modes.length == 2) {
+                value = modes[0] + ":" + REFRESH_HIGH + ":" + modes[1];
+                writeValue(value);
+            }
         }
         return value;
     }
@@ -89,12 +98,15 @@ public final class RefreshUtils {
             case STATE_STANDARD:
                 modes[0] = modes[0] + packageName + ",";
                 break;
-            case STATE_EXTREME:
+            case STATE_HIGH:
                 modes[1] = modes[1] + packageName + ",";
+                break;
+            case STATE_EXTREME:
+                modes[2] = modes[2] + packageName + ",";
                 break;
         }
 
-        finalString = modes[0] + ":" + modes[1];
+        finalString = modes[0] + ":" + modes[1] + ":" + modes[2];
 
         writeValue(finalString);
     }
@@ -106,6 +118,8 @@ public final class RefreshUtils {
         if (modes[0].contains(packageName + ",")) {
             state = STATE_STANDARD;
         } else if (modes[1].contains(packageName + ",")) {
+            state = STATE_HIGH;
+        } else if (modes[2].contains(packageName + ",")) {
             state = STATE_EXTREME;
         }
         return state;
@@ -128,6 +142,12 @@ public final class RefreshUtils {
                 }
 		isAppInList = true;
            } else if (modes[1].contains(packageName + ",")) {
+                maxrate = REFRESH_STATE_HIGH;
+                if ( minrate > maxrate){
+                minrate = maxrate;
+                }
+		isAppInList = true;
+           } else if (modes[2].contains(packageName + ",")) {
                 maxrate = REFRESH_STATE_EXTREME;
                 if ( minrate > maxrate){
                 minrate = maxrate;

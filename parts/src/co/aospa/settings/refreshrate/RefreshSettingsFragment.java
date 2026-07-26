@@ -192,6 +192,8 @@ public class RefreshSettingsFragment extends Fragment
         switch (state) {
             case RefreshUtils.STATE_STANDARD:
                 return R.drawable.ic_refresh_60;
+            case RefreshUtils.STATE_HIGH:
+                return R.drawable.ic_refresh_120;
             case RefreshUtils.STATE_EXTREME:
                 return R.drawable.ic_refresh_144;
             case RefreshUtils.STATE_DEFAULT:
@@ -224,6 +226,7 @@ public class RefreshSettingsFragment extends Fragment
         private final int[] items = {
                 R.string.refresh_default,
                 R.string.refresh_standard,
+                R.string.refresh_high,
                 R.string.refresh_extreme
         };
 
