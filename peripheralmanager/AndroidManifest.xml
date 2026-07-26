@@ -33,7 +33,7 @@
         <activity
             android:name=".StylusSettingsActivity"
             android:label="@string/stylus_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:theme="@style/Theme.SubSettingsBase.Expressive">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>

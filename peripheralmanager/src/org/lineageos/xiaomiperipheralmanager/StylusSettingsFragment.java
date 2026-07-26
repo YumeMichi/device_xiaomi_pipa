@@ -16,24 +16,17 @@
 
 package org.lineageos.xiaomiperipheralmanager;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Switch;
-import android.util.Log;
 
 import android.preference.PreferenceManager;
-import androidx.preference.ListPreference;
-import androidx.preference.Preference;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreferenceCompat;
-import com.android.settingslib.widget.MainSwitchPreference;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import org.lineageos.xiaomiperipheralmanager.PenUtils;
 import org.lineageos.xiaomiperipheralmanager.R;
 
-public class StylusSettingsFragment extends PreferenceFragment implements
+public class StylusSettingsFragment extends SettingsBasePreferenceFragment implements
         SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final String TAG = "XiaomiPeripheralManagerPenUtils";
@@ -43,7 +36,7 @@ public class StylusSettingsFragment extends PreferenceFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.stylus_settings);
+        setPreferencesFromResource(R.xml.stylus_settings, rootKey);
 
         mStylusPreference = PreferenceManager.getDefaultSharedPreferences(getContext());
         SwitchPreferenceCompat switchPreference = (SwitchPreferenceCompat) findPreference(STYLUS_KEY);
