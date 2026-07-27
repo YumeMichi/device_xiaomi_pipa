@@ -34,13 +34,4 @@
     <string translatable="false" name="pipa_refresh_120hz">120Hz</string>
     <string translatable="false" name="pipa_refresh_144hz">144Hz</string>
 
-    <!-- Rotate Tweaks -->
-    <string name="rotate_title">Rotation Lock Tweaks</string>
-    <string name="rotate_summary">More options on rotation lock behavior</string>
-    <string name="rotate_behavior_title">Rotation on apps launching Behavior</string>
-    <string name="rotate_default">Default Behavior(apply new orientation)</string>
-    <string name="rotate_lock">Lock orientation(Miui for Pad)</string>
-    <string name="rotate_restore">Restore on closing(iPad os)</string>
-    <string name="rotate_tweaks_footer">"changes orientation locked behavior only.\n*minor set of apps won't work as expected."</string>
-
 </resources>

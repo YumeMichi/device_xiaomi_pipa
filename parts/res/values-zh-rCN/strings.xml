@@ -6,13 +6,4 @@
     <string name="pipa_refresh_summary">为特定应用设置最高刷新率</string>
     <string name="pipa_refresh_default">默认</string>
 
-    <!-- Rotate Tweaks -->
-    <string name="rotate_title">旋转锁定行为</string>
-    <string name="rotate_summary">更多旋转锁定设置</string>
-    <string name="rotate_behavior_title">旋转锁定时打开应用</string>
-    <string name="rotate_default">默认行为（更改方向）</string>
-    <string name="rotate_lock">保持锁定的方向打开（MIUI for Pad）</string>
-    <string name="rotate_restore">退出后恢复锁定的方向（iPad OS）</string>
-    <string name="rotate_tweaks_footer">"仅在锁定方向后生效\n*少数应用在某些情况不遵循此设置"</string>
-
 </resources>
