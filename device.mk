@@ -181,9 +181,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.bootanim.set_orientation_4630946808805831297=ORIENTATION_90 \
     ro.bootanim.set_orientation_4630946922172900481=ORIENTATION_90
 
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/display/,$(TARGET_COPY_OUT_VENDOR)/etc)
-
 # DRM
 PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
