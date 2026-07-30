@@ -25,6 +25,31 @@
     <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
     <integer name="config_defaultRefreshRateInZone">144</integer>
 
+    <!-- Minimum screen brightness setting allowed by power manager.
+         Set this to 0.0 to allow screen to go to minimal brightness.
+         The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.00170982</item>
+
+    <!-- Maximum screen brightness allowed by the power manager.
+         Set this to 1.0 for maximum brightness range.
+         The user is forbidden from setting the brightness above this level. -->
+    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
+
+    <!-- Default screen brightness setting. Must be in the range specified by minimum and maximum. -->
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.0747435</item>
+
+    <!-- Screen brightness used to dim the screen when the user activity timeout expires.
+         May be less than the minimum allowed brightness setting that can be set by the user. -->
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.00170982</item>
+
+    <!-- Stability requirements in milliseconds for accepting a new brightness level. This is used
+         for debouncing the light sensor when adapting to brighter or darker environments. -->
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
+
+    <!-- The maximum range of gamma adjustment possible using the screen auto-brightness setting. -->
+    <fraction name="config_autoBrightnessAdjustmentMaxGamma">1%</fraction>
+
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
          config_screenBrightnessMaximumNits, the display brightness is defined as the measured
@@ -331,7 +356,7 @@
         <item>1500</item>
         <item>1700</item>
         <item>1900</item>
-        <item>2200</item>
+        <item>2000</item>
         <item>2500</item>
         <item>3000</item>
         <item>3500</item>
@@ -416,7 +441,7 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientBrighteningThresholds">
-        <item>4</item>
+        <item>2</item>
         <item>5</item>
         <item>10</item>
         <item>30</item>
