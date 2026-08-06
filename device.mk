@@ -181,6 +181,12 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.bootanim.set_orientation_4630946808805831297=ORIENTATION_90 \
     ro.bootanim.set_orientation_4630946922172900481=ORIENTATION_90
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # DRM
 PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
