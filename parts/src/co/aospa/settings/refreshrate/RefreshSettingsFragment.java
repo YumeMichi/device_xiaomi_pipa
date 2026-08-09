@@ -239,7 +239,8 @@ public class RefreshSettingsFragment extends Fragment
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view = getDefaultView(position, convertView, parent);
+            View view = convertView != null
+                    ? convertView : getDefaultView(position, null, parent);
             ((TextView) view.findViewById(android.R.id.text1)).setText(getItem(position));
             return view;
         }
@@ -269,14 +270,14 @@ public class RefreshSettingsFragment extends Fragment
         @NonNull
         @Override
          public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ViewHolder(LayoutInflater.from(parent.getContext())
+            ViewHolder holder = new ViewHolder(LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.refresh_list_item, parent, false));
+            holder.mode.setAdapter(new ModeAdapter(parent.getContext()));
+            return holder;
         }
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            Context context = holder.itemView.getContext();
-
             ApplicationsState.AppEntry entry = mEntries.get(position);
 
             if (entry == null) {
@@ -287,10 +288,10 @@ public class RefreshSettingsFragment extends Fragment
             mApplicationsState.ensureIcon(entry);
             holder.icon.setImageDrawable(entry.icon);
             int packageState = mRefreshUtils.getStateForPackage(entry.info.packageName);
-            ModeAdapter modeAdapter = new ModeAdapter(context);
+            ModeAdapter modeAdapter = (ModeAdapter) holder.mode.getAdapter();
             modeAdapter.setSelectedPosition(packageState);
+            holder.mode.setOnItemSelectedListener(null);
             holder.mode.setTag(entry);
-            holder.mode.setAdapter(modeAdapter);
             holder.mode.setSelection(packageState, false);
             holder.mode.setOnItemSelectedListener(this);
             holder.stateIcon.setImageResource(getStateDrawable(packageState));

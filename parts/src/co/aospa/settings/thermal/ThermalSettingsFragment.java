@@ -249,7 +249,8 @@ public class ThermalSettingsFragment extends Fragment
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view = getDefaultView(position, convertView, parent);
+            View view = convertView != null
+                    ? convertView : getDefaultView(position, null, parent);
             ((TextView) view.findViewById(android.R.id.text1)).setText(getItem(position));
             return view;
         }
@@ -279,8 +280,10 @@ public class ThermalSettingsFragment extends Fragment
         @NonNull
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ViewHolder(LayoutInflater.from(parent.getContext())
+            ViewHolder holder = new ViewHolder(LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.thermal_list_item, parent, false));
+            holder.mode.setAdapter(new ModeAdapter(parent.getContext()));
+            return holder;
         }
 
         @Override
@@ -296,10 +299,10 @@ public class ThermalSettingsFragment extends Fragment
             mApplicationsState.ensureIcon(entry);
             holder.icon.setImageDrawable(entry.icon);
             int packageState = mThermalUtils.getStateForPackage(entry.info.packageName);
-            ModeAdapter modeAdapter = new ModeAdapter(holder.itemView.getContext());
+            ModeAdapter modeAdapter = (ModeAdapter) holder.mode.getAdapter();
             modeAdapter.setSelectedPosition(packageState);
+            holder.mode.setOnItemSelectedListener(null);
             holder.mode.setTag(entry);
-            holder.mode.setAdapter(modeAdapter);
             holder.mode.setSelection(packageState, false);
             holder.mode.setOnItemSelectedListener(this);
             holder.stateIcon.setImageResource(getStateDrawable(packageState));
