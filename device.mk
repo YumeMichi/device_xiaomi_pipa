@@ -255,8 +255,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.lmk.force_inkernel_lmk=true
 
 # Media
-TARGET_SUPPORTS_OMX_SERVICE := false
-
 PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.c2inputsurface=-1 \
     ro.odm.build.media_performance_class=30 \
