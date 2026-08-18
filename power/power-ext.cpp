@@ -6,6 +6,7 @@
 
 #include <aidl/android/hardware/power/Boost.h>
 #include <aidl/android/hardware/power/Mode.h>
+#include <android-base/properties.h>
 
 #include <cstdint>
 #include <mutex>
@@ -21,8 +22,17 @@ constexpr int kGpuMinPowerLevel = 0x42804000;
 // pwrlevel 0 requests the highest frequency available to the speed bin.
 constexpr int kGpuInteractionPowerLevel = 0;
 
+constexpr char kBackgroundBlurSupportProperty[] =
+        "ro.surface_flinger.supports_background_blur";
+
 int sInteractionHandle = 0;
 std::mutex sInteractionMutex;
+
+bool isBackgroundBlurSupported() {
+    static const bool supported =
+            ::android::base::GetBoolProperty(kBackgroundBlurSupportProperty, false);
+    return supported;
+}
 
 } // namespace
 
@@ -39,6 +49,11 @@ bool isDeviceSpecificModeSupported(Mode, bool*) {
 
 bool setDeviceSpecificBoost(Boost type, int32_t durationMs) {
     if (type != Boost::INTERACTION) {
+        return false;
+    }
+
+    // Avoid the extra GPU boost on devices where SurfaceFlinger blur is disabled.
+    if (!isBackgroundBlurSupported()) {
         return false;
     }
 
@@ -59,7 +74,7 @@ bool isDeviceSpecificBoostSupported(Boost type, bool* supported) {
         return false;
     }
 
-    *supported = true;
+    *supported = isBackgroundBlurSupported();
     return true;
 }
 
