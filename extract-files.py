@@ -25,9 +25,6 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'libOmxCore',
-    ): lib_fixup_remove,
-    (
         'libmmosal',
         'vendor.display.color@1.0',
         'vendor.display.color@1.1',

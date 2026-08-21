@@ -720,14 +720,12 @@ vendor/lib64/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so|9af649faa7b43033
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
-vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libvppclient.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvppimmotion.so
 vendor/lib/libvpplibrary.so
 vendor/lib/libvpptestutils.so
-vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
