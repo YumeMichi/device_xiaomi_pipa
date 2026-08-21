@@ -13,16 +13,6 @@
      limitations under the License.
 -->
 <manifest version="1.0" type="device">
-    <!-- AudioHAL ext -->
-    <hal format="hidl">
-        <name>vendor.qti.hardware.audiohalext</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAudioHalExt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- Sensors -->
     <hal format="hidl">
         <name>android.hardware.sensors</name>

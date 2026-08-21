@@ -45,24 +45,6 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib/libaudioroute_ext.so': blob_fixup()
-        .replace_needed(
-            'libaudioroute.so',
-            'libaudioroute-v34.so',
-        ),
-    'vendor/lib/hw/audio.primary.pipa.so': blob_fixup()
-        .binary_regex_replace(
-            b'/vendor/lib/liba2dpoffload\\.so',
-            b'liba2dpoffload_pipa.so\x00\x00\x00\x00\x00\x00\x00',
-        )
-        .binary_regex_replace(
-            b'/vendor/lib/libssrec\\.so',
-            b'libssrec_pipa.so\x00\x00\x00\x00\x00\x00\x00',
-        )
-        .replace_needed(
-            'libaudioroute.so',
-            'libaudioroute-v34.so',
-        ),
     (
         'vendor/lib64/mediadrm/libwvdrmengine.so',
         'vendor/lib64/libwvhidl.so',

@@ -51,39 +51,21 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
 
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.audio.delta.refresh=true \
-    persist.vendor.audio.misound.disable=true \
-    persist.vendor.audio.ring.filter.mask=0 \
-    ro.audio.monitorRotation=true \
     ro.config.vc_call_vol_steps=11 \
-    ro.hardware.audio.primary=pipa \
-    ro.vendor.audio.enhance.support=false \
-    ro.vendor.audio.gain.support=true \
-    ro.vendor.audio.karaok.support=true \
-    ro.vendor.audio.ns.support=false \
-    ro.vendor.audio.scenario.support=true \
-    ro.vendor.audio.soundfx.type=mi \
-    ro.vendor.audio.soundfx.usb=true \
-    ro.vendor.audio.support.sound.id=true \
-    ro.vendor.audio.us.proximity=true \
-    ro.vendor.audio.us.type=mius \
-    ro.vendor.audio.zoom.support=true \
-    ro.vendor.audio.zoom.type=1 \
-    vendor.audio.spkcal.copy.inhal=true \
     vendor.audio.usb.disable.sidetone=true
 
 PRODUCT_ODM_PROPERTIES += \
-    aaudio.mmap_policy=1 \
     ro.vendor.audio.sdk.fluencetype=fluence \
     vendor.audio.adm.buffering.ms=6 \
     vendor.audio.feature.dynamic_ecns.enable=false \
+    vendor.audio.feature.kpi_optimize.enable=false \
     vendor.audio.feature.spkr_prot.enable=false \
     vendor.audio.hal.output.suspend.supported=false \
     vendor.audio.offload.multiple.enabled=true \
     vendor.audio.offload.track.enable=false
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/mixer_paths_overlay_static.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_overlay_static.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
 
