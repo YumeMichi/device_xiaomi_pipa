@@ -276,6 +276,7 @@ PRODUCT_PACKAGES += \
     FrameworksRes23043RP34C \
     FrameworksResTarget \
     PipaAperture \
+    PipaDeviceAsWebcam \
     PipaFlipFlap \
     PipaFrameworks \
     PipaSettings \
@@ -393,6 +394,10 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
+
+# USB
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.enabled=true
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/pipa/pipa-vendor.mk)
