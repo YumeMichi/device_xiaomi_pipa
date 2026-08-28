@@ -117,6 +117,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 
 KERNEL_DEFCONFIG := vendor/pipa_defconfig
 
+KERNEL_CLANG_VERSION := r596125
 KERNEL_FULL_LLVM := true
 
 # Lineage Health
